@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: hetwrogeneity - v3.aux
+The style file: plos2009.bst
+Illegal, another \bibstyle command---line 56 of file hetwrogeneity - v3.aux
+ : \bibstyle
+ :          {plain}
+I'm skipping whatever remains of this command
+Database file #1: heterogeneity.bib
+Warning--I didn't find a database entry for ""
+Warning--missing publisher in adams2006energy
+Warning--empty year in conover1999Practical
+(There was 1 error message)

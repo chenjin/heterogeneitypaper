@@ -1,0 +1,245 @@
+\documentclass[times,11pt]{article}
+\newcommand{\nop}[1]{}
+\newcommand\ASI{{\it ASI}}
+\usepackage{wrapfig}
+\usepackage{mathrsfs}
+%\usepackage{psfig}
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{epsf}
+\usepackage{amsmath, amsthm, amssymb, multirow, paralist, subfigure}
+\usepackage{fullpage}
+\usepackage{url,color}
+\usepackage{algorithm,algorithmic}
+\usepackage{epstopdf}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{definition}[thm]{Definition}
+
+\def \B {\mathcal{B}}
+\def \x {\mathbf{x}}
+\def \H {\mathcal{H}_{\kappa}}
+\def \R {\mathbb{R}}
+\def \w {\mathbf{w}}
+\def \wh {\widehat{\w}}
+\def \sgn {\mbox{sgn}}
+\def \a {\mathbf{a}}
+\def \u {\mathbf{u}}
+\def \uh {\widehat{\u}}
+\def \wt {\widetilde{\w}}
+\def \E {\mathrm{E}}
+\def \C {\mathcal{C}}
+\def \xh {\widehat{\x}}
+\def \xt {\widetilde{\x}}
+\def \yh {\widehat{y}}
+\def \A {\mathcal{A}}
+\def \S {\mathcal{S}}
+\def \Mh {\widehat{M}}
+\def \Z {\mathcal{Z}}
+\def \xt {\widetilde{\x}}
+\def \Xh {\widehat{X}}
+\def \D {\mathcal{D}}
+\def \z {\mathcal{z}}
+\def \h {\mathbf{h}}
+\def \c {\mathbf{c}}
+\def \z {\mathbf{z}}
+\def \sh {\widehat{s}}
+
+%\usepackage{fullpage,comment,times}
+%\usepackage{graphicx}
+%\usepackage{subfigure}
+%\usepackage{wrapfig}
+%\usepackage{cite}
+%    \ifx\pdfpagewidth\undefined\else\pdfpagewidth 8.5in\fi
+%    \ifx\pdfpageheight\undefined\else\pdfpageheight 11in\fi
+
+
+\begin{document}
+
+\title{Modeling Plant Photosynthesis Heterogeneity Reveals ...}
+
+\author{Oliver L Tessmer, Jeffrey A Cruz, Linda J Savage, David M Kramer, Jin Chen}
+
+\maketitle
+
+\begin{abstract}
+Photosynthetic heterogeneity is a universal phenomenon among plants (Charles 2008). 
+\end{abstract}
+
+\section{Introduction}
+
+%[Phenotyping]
+Using sunlight, water and $CO_2$, plants produce sugars and release $O_2$ with photosynthesis \cite{kramer2011importance}. The process involves the formation of high energy intermediates capable of generating reactive oxygen species. The photosynthetic apparatus, chloroplast and surrounding leaf tissue is inherently susceptible to oxidative damage, especially under stress conditions when the supply of light energy exceeds the capacity to utilize it \cite{asada1996radical,durrant1990characterisation}. Plants have evolved a number of mechanisms, such as photosynthetic apparatus damage and repair \cite{melis1999photosystem}, to dissipate excess light energy to minimize the potential for damage at the expense of photosynthetic efficiency \cite{adams2006energy,rochaix2014regulation}. However, these mechanisms are sensitive to leaf development and thus may change from one leave tissue to another, resulting in heterogenous photosynthetic patterns (see Figure \ref{fig:heterogeneityexample}). These patterns also vary with the position, size and growth rate of leaves, since leaves at the same node is unique in age. By integrating plant morphological and physiological features, measuring plant photosynthetic heterogeneity aids interpretation of the sophisticated photosynthesis mechanism, particularly important for plant primary productivity estimation and modeling \cite{meng2007spatial}.
+
+%Advanced technologies in high-throughput plant photosynthetic phenotyping (the Dynamic Environment Photosynthesis Imager, or DEPI) have been developed \cite{cruz2014depi,houle2010phenomics}. These systems generate huge amount of images of plant photosynthesis that can be used to quantify photosynthetic behavior in genetically diverse populations, leading to better understanding of the underlying mechanisms that control the photosynthetic properties \cite{fiorani2013future,rascher2011non}, enabling to measure variability in various photosynthetic parameters at high resolution across leaves.
+
+%The model of spatial heterogeneity of the photosynthetic properties may reveal $CO_2$ intake capability, stomatal conductance and tolerance level to environmental changes of leaf tissues at different developmental stages.
+
+%photosynthetic heterogeneity refers to a plant comprising multiple regions, a significant amount of which have different photosynthesis properties, %. %For example, under full sunlight photosynthesis usually captures at most only of available energy (bonner1962upper, von1981some, kramer2011importance).
+
+%\section{Background}
+
+Heterogeneity is a concept relating to the uniformity in a substance.  %($CO_2$ intake capability, stomatal conductance).
+%
+The granularity of photosynthetic heterogeneity ranges from cells to tissues, leaves, and even the whole plant. While in-leaf variability in photosynthetic activity has been well-studied for the understanding of the effects of stomatal conductance \cite{Buckley1997,Cheeseman1991}, recent works show that photosynthetic capacity may decline with vertical gradient and leaf age \cite{chen2008effect,Kitajima2002}, indicating that leaf-based photosynthetic heterogeneity is a key towards the understanding of plant photosynthesis.
+
+The leaf heterogeneity in photosynthesis was firstly been studied  with a simulation model \cite{chen2008effect}. Due to the lack of high-throughput phenotyping technology in 2008, the authors determined the effects of biochemical variability via the Farquhar model incorporating defined degrees of spatial variability of its parameters. The Farquhar model is a mechanistic, biochemical model widely used to describe steady-state $CO_2$ assimilation in leaves \cite{farquhar2001models,sharkey1985o2}. Spatial heterogeneity in photosynthesis was found to have an effect on the ability of the Farquhar model to accurately characterize photosynthesis at the leaf level \cite{chen2008effect}. 
+
+With the advent of advanced technologies of biomedical imaging, directly measuring heterogeneity has recently assumed new importance {\cite{cruz2014depi,tiihonen1996cerebral,wieneke1999non,wang2000}. The rapid development of lighting and imaging techniques enables real-time non-invasive monitoring of photosynthesis \cite{cruz2014depi,houle2010phenomics}, resulting in vast amount of images of plant photosynthesis \cite{wituszynska2013multivariable}. These images can be used to quantify photosynthetic behavior in genetically diverse populations, enabling to measure variability of photosynthetic parameters at high resolution across leaves, leading to better understanding of the underlying mechanisms that control the photosynthetic properties \cite{fiorani2013future,rascher2011non}.
+
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[width=2in]{preprocessing.png}
+\caption{\small Examples of leaf-level photosynthetic heterogeneity.}
+\end{center}\label{fig:heterogeneityexample}
+\end{figure}
+
+In order to measure leaf-based photosynthetic variability in a large-scale phenotyping experiment, in which hundreds of plants are screened simultaneously, it is required to automatically segment each leaf from top-view images, and then measure the variations of photosynthesis parameters across leaves.
+Photosynthesis images are false-color images, where the light intensity of every pixel is proportional to photosynthetic efficiency \cite{toet1996new} (see Figure \ref{fig:heterogeneityexample}). Differences between individual leaves with similar photosynthetic efficiency can be subtle, making the boundaries between them difficult to define and creating a significant challenge for subsequent shape analysis. The difficulty even arises when individual leaves overlap and occlude one another in these false-color images.
+%challenges in heterogeneity measure
+...
+
+%We have developed a new leaf segmentation approach called leafPH to identify leaves from photosynthesis images...
+
+In this paper, we present a new computational framework called leafPH to measure the leaf-level photosynthesis heterogeneity. Comparing with the existing approaches, our method is novel in the following ways:
+
+1.	leafPH relies on a novel leaf alignment and tracking method... %, which considers plant-specific constraints including leaf shape similarity and symmetry. By taking the biological knowledge about the shapes of any possible leaf into account, we add flexibility to the model to fit to all the general leaves. Specifically, for leaf boundary identification, we develop a leaf symmetry based curve fitting model to define the initial shape of a leaf, and develop a plant layout based approach to define leaf tips and orientation, therefore defining the leaf initial position.  Note that since leaf is assumed to be symmetric, curve fitting could converge without large amount of training.
+
+2. leafPH models heterogeneity of photosynthesis with size, position and growth rate...
+
+3. leafPH refers to the differences between individual leaf photosynthesis and the pooled photosynthesis across all the leaves, with the weights being those used in the pooling method. With leafPH, transient regional variation events that do not affect the whole plant photosynthesis, can be easily discovered.
+
+%---------------------------
+
+
+
+\section{Background} %of heterogeneity measurement}
+
+Cochran's Q-test is the classical measure of heterogeneity \cite{conover1999Practical}. In leaf-based photosynthetic heterogeneity, Q is calculated as the weighted sum of squared differences between the photosynthesis value of a individual leaf and the pooled photosynthesis value across all leaves with the weights being those used in the pooling method. The distribution of Q is a chi-square statistic with $k-1$ degrees of freedom, where $k$ is the number of leaves. Cochran's Q-test has been widely used in biomedical studies. For example, heterogeneity in the aggressiveness of tumor cell populations has been adopted as an essential feature in predicting treatment success \cite{OSullivan2003}. However, due to the nature of plant, leaf-based photosynthetic heterogeneity often includes a small number of leaves, and thus the power of the Q-test in such circumstances is low \cite{higgins2003measuring, gavaghan2000evaluation}.
+%
+%Conversely, Q has too much power as a test of heterogeneity if the number of leaves is large \cite{higgins2003measuring}.
+
+%An additional test is provided with the odds ratio meta-analysis \cite{breslow1987statistical}. It is arguably not possible to examine the null hypothesis that all studies are evaluating the same effect, by considering the only the summary data from the studies: The heterogeneity test results should be considered alongside a qualitative assessment of the combinability of studies in a systematic review.
+
+The $I^2$ statistic describes the percentage of variation across studies that is due to heterogeneity rather than chance \cite{higgins2002quantifying,higgins2003measuring}. $I^2$ can be calculated  as $I^2 = (Q - df)/Q$, where Q is Cochran's Q-test heterogeneity statistic and $df$ is the degrees of freedom. A negative value  indicates no observed heterogeneity, and larger values show increasing heterogeneity. $I^2$ is an intuitive and simple expression of the inconsistency. $I^2$ of leaf-based photosynthetic heterogeneity does not inherently depend upon the number of leaves, so that $I^2$ values of different plants become comparable. A confidence interval for $I^2$ is constructed using either the iterative non-central chi-squared distribution method \cite{hedges2001power} or the test-based method \cite{higgins2002quantifying}.
+
+Based on Cochran's Q-test and the $I^2$ statistic, we develop a new approach that quantifies the effect of heterogeneity of photosynthesis across leaves of the same plant, and compare the degree of inconsistency among mutant strains in varying environmental conditions. The challenges of this work are the leaf alignment and the new heterogeneity measure that takes leaf position, size and growth into consideration.
+
+%To measure leaf-based photosynthetic variability in a large-scale phenotyping experiment, in which hundreds of plants are monitored in real time, it is naturally required to identify each leaf from top-view photosynthesis images automatically. However, leaf identification is a difficult task, in that 1) all the leaves are very similar in appearance especially for model plant Arabidopsis; 2) leaf features are much fewer than the well-studied face recognition problem; and 3) leaves may overlapped with each other that makes the problem more complicated. In short, there are two challenging computational problems. First, how to separate overlapped leaves in photosynthesis images where the leaf boundaries are obscure. Second, how to recognize incomplete leafs due to occlusion. Alternatively, approximation approaches can be used to estimate the leaf-based photosynthetic heterogeneity, including distribution based, region based and pixel based approaches. While these approximation approaches are easier to model, their performance may be reduced.
+
+\section{Method}
+
+In plants, photosynthetic heterogeneity refers to a plant comprising multiple regions, many of which have different photosynthesis properties, potentially because of vastly different leaf developmental stage and tolerance level to environmental changes \cite{}.
+
+\subsection{Leaf alignment and tracking}
+XXX
+
+\subsection{Leaf-based photosynthetic heterogeneity}
+
+The traditional heterogeneity measure was designed to compute the differences between individual study effects, and for each individual study,  people assume only two underlying populations representing the
+experimental vs. control groups on a continuous outcome. However, to compute the leaf-based photosynthetic heterogeneity, we have to compare all the leaves where each leaf may have its unique underlying population. To solve the more complicated problem, we modified the current Q test, and describe it in this section.
+
+\subsubsection{Effect-size estimate for leaf pair-wise comparison}
+%
+Given a plant with $n$ leaves, we define a set $T = \{T_{11}, T_{12}, \ldots\}$, where $|T|=n\times(n-1)/2$, which is the total number of  pair-wise leaf-to-leaf comparisons. In each tuple $T_{ij}$, we compare the photosynthesis values of leaves $L_i$ and $L_j$ using Equation \ref{eq:T}.
+
+\begin{equation}\label{eq:T}
+T_{ij} = c(L_i, L_j) \frac{mean(L_i)-mean(L_j)}{S(L_i, L_j)}
+\end{equation}
+
+\noindent where $mean(L_i)$ is the averaged photosynthesis value of every pixel in leaf $L_i$, and $c(L_i, L_j)$ is a correction factor for the positive bias suffered by the standardized mean difference with small sample sizes, and can be estimated by $c(L_i, L_j) = 1-3/(4|L_i|+4|L_j|-9)$, according to (Hedges and Olkin 1985) \cite{hedges1998fixed}.
+%
+Such adjustment is necessary, because for small plants due to gene knockout, there may be only a few pixels for each leaf. According to the equation of $c(L_i, L_j)$, $c(L_i, L_j)$ is close to 1 for large leaves with many pixels, otherwise it is close to 0, downweighing the value of heterogeneity. $S$ is a pooled estimate of the within-group standard deviation using Equation \ref{eq:S} \cite{hedges1998fixed}.
+
+\begin{equation}\label{eq:S}
+S(L_i, L_j) = \sqrt{\frac{(|L_i|-1)std^2(L_i)+(|L_j|-1)std^2(L_j)}{|L_i|+|L_j|-2}}
+\end{equation}
+
+\noindent where $std^2(L_i)$ is the standard variance of leaf $L_i$ and $|L_i|$ is the total number of pixels in leaf $L_i$.
+
+The sample variance of $T_{ij}$ is estimated using Equation \ref{eq:ST} \cite{hedges1998fixed}.
+
+\begin{equation}\label{eq:ST}
+ST_{ij} = \frac{|L_i|+|L_j|}{|L_i||L_j|}+\frac{T_{ij}^2}{2(|L_i|+|L_j|)}
+\end{equation}
+
+\subsubsection{Random effect-size estimate for all-leaf comparison}
+
+Once an effect-size estimate is obtained from each pair-wise comparison, we integrate them by calculating an average effect size, assessing the statistical heterogeneity around the average estimate, and searching for moderator variables when there is more heterogeneity than can be explained by chance. In general, the most realistic statistical model to integrate the effect estimates in a meta-analysis is the
+random-effects model, because it incorporates the two possible sources of heterogeneity among the studies, i.e., statistical variability caused by sampling error and substantive variability.
+
+Given the set of all pair-wise comparisons $T$, we compute leaf-based photosynthetic heterogeneity LeafPH using Equation \ref{eq:LeafPH}.
+
+\begin{equation}\label{eq:LeafPH}
+LeafPH = \frac{\sum_{i,j} w_{ij}(T_{ij}-\bar{T})}{|T|}
+\end{equation}
+
+\noindent where $\bar{T}$ is the weighted average of all $T_{i,j}$.
+
+To compute the weight $w_{ij}$ for each pair-wise comparison $T_{ij}$, we develop the following strategies. First, the value differences between large leaves should contribute more to the overall heterogeneity score. The leaf area based weight can be modeled using $min(|L_i|, |L_j|)/\sum L$. Second, we also think the heterogeneity between different regions of a plant is more interesting than the heterogeneity within the same region. So the leaf region based weight can me modeled using a binary function $[Pos(L_i)\neq Pos(L_j)]$, where the function $[x]$ return 1 if $x$ is true, and return 0 otherwise. In summary, we define $w_{ij}$ using Equation \ref{eq:weight}.
+
+\begin{equation}\label{eq:weight}
+w_{ij}=[Pos(L_i)\neq  Pos(L_j)] \times \frac{min(|L_i|, |L_j|)}{(ST^2_{ij}+\tau^2+1) \sum L}
+\end{equation}
+
+\noindent where $\tau^2$ is the between-study variability affecting the effect estimates. A commonly used estimator of the between-studies variance $\tau^2$  is an estimator based on the method of moments proposed by DerSimonian and Laird (1986).
+
+\begin{equation}\label{eq:tau}
+\tau^2 = \left\{\begin{matrix}
+ \frac{\widetilde{Q}-|T|+1}{\sum \widetilde{w_{ij}}-\frac{\sum \widetilde{w_{ij}}^2}{\sum \widetilde{w_{ij}}}} & \widetilde{Q}>|T|+1\\
+ 0 & else
+\end{matrix}\right.
+\end{equation}
+
+\noindent where $\widetilde{Q}$ and $\widetilde{w_{ij}}$ are the results of Q test of fixed effect estimate and the corresponding weight.
+
+\begin{equation}\label{eq:weight}
+\widetilde{w_{ij}}=[Pos(L_i)\neq  Pos(L_j)] \times \frac{min(|L_i|, |L_j|)}{(ST^2_{ij}+c) \sum L}
+\end{equation}
+
+\subsection{next step...}
+
+%more advanced solution to Leaf-based photosynthetic heterogeneity
+Plants have different shaped leaves as they have coped to live in different environments. Since leaves varying dramatically in shape and size and there is no model fit to all kinds of leaves, we focus on the model plant Arabidopsis in this study. A closed observation on Arabidopsis rosette leaves reveal that all the intact leaves are symmetry with their shapes close to oval, and all the leaves are at a similar height (2-3mm tall, does not have high canopy), but the photosynthesis values of different leaves can be statistically different under certain conditions.
+
+
+
+
+\section{Modeling Photosynthesis Heterogeneity}
+
+
+\section{Experiments}
+
+The L'Abbe plot can be used to visually explore the inconsistency of leaf-based photosynthesis.
+
+\subsection{Data Acquisition and Preprocessing}
+
+In the photosynthesis phenotyping experiment, hundreds of Arabidopsis thaliana plants (wild type, genetic variations with gene knockout or over-expression, ecotypes, etc) were grown side-by-side under three different light conditions (constant, sinusoid, fluctuate), for in total three days.
+%
+Top-view fluorescence images were collected every 15 minutes in order to observe the photosynthesis activity of all of the plants simultaneously. Each fluorescence image is a grey-scale image with a resolution of 1M pixels at 12-bit intensity.
+
+To accurately capture the photosynthesis activities of plants from fluorescence images, a image segment method is applied to remove the background, identify every piece of leaf~\cite{yin2014}, measure the intensity of pixels on leaves, and finally convert the intensity values to the measure of four kinds of photosynthesis parameters.
+%
+The extracted measurements of photosynthesis parameters are presented in the form of multi-dimensional time-series, one dimension for every photosynthesis parameter.
+%
+Figure 1 shows that the measurements of a photosynthesis parameter $\Phi_2$ at one time point are quite different for the leaves of the same plant  (i.e. plant no. 3-7 and 5-5).
+
+\section{Conclusion}
+
+A consensus view of the data is that the photosynthesis ability of a plant is not uniform across the whole area (Charles 2008, Meng 2007).
+%
+The photosynthetic properties of plants can vary dramatically across cells, tissues, and organs~\cite{}, reflecting differences in development, stress responses, regulation of processes such as stomatal conductance~\cite{}, photodamage~\cite{}, and storage of photosynthate~\cite{} and contribute substantially to productivity~\cite{}.
+
+For example, we observed that the acclimation of photosynthesis in response to cold temperatures appears to be more rapid and robust in younger or emerging than older leaves, and ecotypes isolated from different latitudes show distinct heterogeneity patterns, implying that these responses are important for adaptation of photosynthesis to fluctuating temperatures.
+%
+In other cases, exposure of plants to fluctuating light resulted in loss of photosynthetic capacity or increased photoinhibition in specific sets of leaves or leaf sectors. In many cases, older leaves are preferentially affected, suggesting that resources for maintenance or acclimation responses are preferentially directed to younger leaves. However, we have also identified mutant lines where younger leaves are preferentially affected, which presumably affect the development of photosynthetic robustness.
+
+In order to systematically study the leaf level photosynthesis phenotypes, especially in a high-throughput screen manner, we developed a novel computational tool to automatically conduct statistical analysis on leaf based photosynthesis.
+
+\small
+\bibliographystyle{plain}
+\bibliography{heterogeneity}
+
+\end{document}

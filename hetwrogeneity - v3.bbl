@@ -1,0 +1,204 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{kramer2011importance}
+Kramer D, Evans J (2011) The importance of energy balance in improving
+  photosynthetic productivity.
+\newblock Plant physiol 155: 70--78.
+\bibAnnoteFile{kramer2011importance}
+
+\bibitem{asada1996radical}
+Asada K (1996) Radical production and scavenging in the chloroplasts.
+\newblock In: Photosynthesis and the Environment, Springer. pp. 123--150.
+\bibAnnoteFile{asada1996radical}
+
+\bibitem{durrant1990characterisation}
+Durrant J, Giorgi L, Barber J, Klug D, Porter G (1990) Characterisation of
+  triplet states in isolated photosystem ii reaction centres: oxygen quenching
+  as a mechanism for photodamage.
+\newblock Biochimica et Biophysica Acta (BBA)-Bioenergetics 1017: 167--175.
+\bibAnnoteFile{durrant1990characterisation}
+
+\bibitem{melis1999photosystem}
+Melis A (1999) Photosystem-ii damage and repair cycle in chloroplasts: what
+  modulates the rate of photodamage in vivo?
+\newblock Trends in plant science 4: 130--135.
+\bibAnnoteFile{melis1999photosystem}
+
+\bibitem{adams2006energy}
+Adams~III W, Zarter C, Mueh K, Demmig-Adams B, et~al. (2006) Energy dissipation
+  and photoinhibition: a continuum of photoprotection.
+\newblock In: Photoprotection, photoinhibition, gene regulation, and
+  environment. pp. 49--64.
+\bibAnnoteFile{adams2006energy}
+
+\bibitem{rochaix2014regulation}
+Rochaix J (2014) Regulation and dynamics of the light-harvesting system.
+\newblock Annu Rev Plant Biol 65: 287--309.
+\bibAnnoteFile{rochaix2014regulation}
+
+\bibitem{meng2007spatial}
+Meng C, Xu M, Li J, Gao S (2007) Spatial heterogeneity of photosynthetic
+  characteristics of castanopsis fargesii canopy.
+\newblock The journal of applied ecology 18: 1932--1936.
+\bibAnnoteFile{meng2007spatial}
+
+\bibitem{Buckley1997}
+Buckley T, Farquhar G, Mott K (1997) Qualitative effects of patchy stomatal
+  conductance distribution features on gas-exchange calculations.
+\newblock Plant Cell Environ 20: 867?80.
+\bibAnnoteFile{Buckley1997}
+
+\bibitem{Cheeseman1991}
+Cheeseman J (1991) Patchy - simulating and visualizing the effects of stomatal
+  patchiness on photosynthetic co2 exchange studies.
+\newblock Plant Cell Environ 14: 593?99.
+\bibAnnoteFile{Cheeseman1991}
+
+\bibitem{chen2008effect}
+Chen C, Zhu X, Long S (2008) The effect of leaf-level spatial variability in
+  photosynthetic capacity on biochemical parameter estimates using the farquhar
+  model: a theoretical analysis.
+\newblock Plant physiology 148: 1139--1147.
+\bibAnnoteFile{chen2008effect}
+
+\bibitem{Kitajima2002}
+Kitajima K, Mulkey S, Samaniego M, Wright S (2002) Decline of photosynthetic
+  capacity with leaf age and position in two tropical pioneer tree species.
+\newblock Am J Bot 89: 1925-1932.
+\bibAnnoteFile{Kitajima2002}
+
+\bibitem{farquhar2001models}
+Farquhar G, von Caemmerer S, Berry J (2001) Models of photosynthesis.
+\newblock Plant Physiology 125: 42--45.
+\bibAnnoteFile{farquhar2001models}
+
+\bibitem{sharkey1985o2}
+Sharkey T (1985) O2-insensitive photosynthesis in c3 plants its occurrence and
+  a possible explanation.
+\newblock Plant Physiology 78: 71--75.
+\bibAnnoteFile{sharkey1985o2}
+
+\bibitem{cruz2014depi}
+Cruz J, Savage L, Zegarac R, Kovac W, Hall C, et~al. (2014) Dynamic
+  environmental photosynthetic imaging (depi) reveals emergent phenotypes
+  related to the environmental responses of photosynthesis.
+\newblock Nat Biotech in revision.
+\bibAnnoteFile{cruz2014depi}
+
+\bibitem{tiihonen1996cerebral}
+Tiihonen J, Kuikka J, R{\"a}s{\"a}nen P, Lepola U, Koponen H, et~al. (1996)
+  Cerebral benzodiazepine receptor binding and distribution in generalized
+  anxiety disorder: a fractal analysis.
+\newblock Molecular psychiatry 2: 463--471.
+\bibAnnoteFile{tiihonen1996cerebral}
+
+\bibitem{wieneke1999non}
+Wieneke H, Zander C, Eising E, Haude M, Bockisch A, et~al. (1999) Non-invasive
+  characterization of cardiac microvascular disease by nuclear medicine using
+  single-photon emission tomography.
+\newblock Herz 24: 515--521.
+\bibAnnoteFile{wieneke1999non}
+
+\bibitem{wang2000}
+Wang N, Wilkin C, Bocking A, Tribukait B (1999) Evaluation of tumor
+  heterogeneity of prostate carcinoma by flow- and image dna cytometry and
+  histopathological grading.
+\newblock Anal Cell Pathology 20: 49-62.
+\bibAnnoteFile{wang2000}
+
+\bibitem{houle2010phenomics}
+Houle D, Govindaraju D, Omholt S (2010) Phenomics: the next challenge.
+\newblock Nat Rev Genet 11: 855--866.
+\bibAnnoteFile{houle2010phenomics}
+
+\bibitem{wituszynska2013multivariable}
+Wituszynska W, Galazka K, Rusaczonek A, Vanderauwera S, Van~Breusegem F, et~al.
+  (2013) Multivariable environmental conditions promote photosynthetic
+  adaptation potential in arabidopsis thaliana.
+\newblock Journal of plant physiology 170: 548--559.
+\bibAnnoteFile{wituszynska2013multivariable}
+
+\bibitem{fiorani2013future}
+Fiorani F, Schurr U (2013) Future scenarios for plant phenotyping.
+\newblock Annu Rev Plant Biol 64: 267--291.
+\bibAnnoteFile{fiorani2013future}
+
+\bibitem{rascher2011non}
+Rascher U, Blossfeld S, Fiorani F, et~al. (2011) Non-invasive approaches for
+  phenotyping of enhanced performance traits in bean.
+\newblock Funct Plant Biol 38: 968--983.
+\bibAnnoteFile{rascher2011non}
+
+\bibitem{toet1996new}
+Toet A, Walraven J (1996) New false color mapping for image fusion.
+\newblock Optical Engineering 35: 650--658.
+\bibAnnoteFile{toet1996new}
+
+\bibitem{yin2014}
+Yin X, Liu X, Chen J, Kramer D (2014) Multi-leaf alignment from fluorescence
+  plant images.
+\newblock IEEE Winter Conference on Applications of Computer Vision .
+\bibAnnoteFile{yin2014}
+
+\bibitem{hedges1998fixed}
+Hedges L, Vevea J (1998) Fixed-and random-effects models in meta-analysis.
+\newblock Psychological methods 3: 486.
+\bibAnnoteFile{hedges1998fixed}
+
+\bibitem{hedge1985statistical}
+Hedges L, Olkin I (1985) Statistical methods for meta-analysis.
+\newblock Orlando: Academic.
+\bibAnnoteFile{hedge1985statistical}
+
+\bibitem{dersimonian1986meta}
+DerSimonian R, Laird N (1986) Meta-analysis in clinical trials.
+\newblock Controlled clinical trials 7: 177--188.
+\bibAnnoteFile{dersimonian1986meta}
+
+\bibitem{conover1999Practical}
+Conover W Practical Nonparametric Statistics.
+\newblock John Wiley and Sons, New York.
+\bibAnnoteFile{conover1999Practical}
+
+\bibitem{OSullivan2003}
+O'Sullivan F, Roy S, Eary J (2003) A statistical measure of tissue
+  heterogeneity with application to 3d pet sarcoma data.
+\newblock Biostat 4: 433-448.
+\bibAnnoteFile{OSullivan2003}
+
+\bibitem{higgins2003measuring}
+Higgins J, Thompson S, Deeks J, Altman D (2003) Measuring inconsistency in
+  meta-analyses.
+\newblock British Medical Journal 327: 557--560.
+\bibAnnoteFile{higgins2003measuring}
+
+\bibitem{gavaghan2000evaluation}
+Gavaghan D, Moore R, McQuay H (2000) An evaluation of homogeneity tests in
+  meta-analyses in pain using simulations of individual patient data.
+\newblock Pain 85: 415--424.
+\bibAnnoteFile{gavaghan2000evaluation}
+
+\bibitem{higgins2002quantifying}
+Higgins J, Thompson S (2002) Quantifying heterogeneity in a meta-analysis.
+\newblock Statistics in medicine 21: 1539--1558.
+\bibAnnoteFile{higgins2002quantifying}
+
+\bibitem{hedges2001power}
+Hedges L, Pigott T (2001) The power of statistical tests in meta-analysis.
+\newblock Psychological methods 6: 203.
+\bibAnnoteFile{hedges2001power}
+
+\end{thebibliography}
