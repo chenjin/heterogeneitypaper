@@ -1,261 +1,262 @@
-\begin{thebibliography}{10}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
-  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
-  \urlstyle{rm}\Url}\fi
-\providecommand{\bibAnnoteFile}[1]{%
-  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
-\providecommand{\bibAnnote}[2]{%
-  \begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ #2\end{quotation}}
-\providecommand{\eprint}[2][]{\url{#2}}
+\begin{thebibliography}{}
 
-\bibitem{kramer2011importance}
-Kramer D, Evans J (2011) The importance of energy balance in improving
-  photosynthetic productivity.
-\newblock Plant Physiol 155: 70--78.
-\bibAnnoteFile{kramer2011importance}
+\bibitem[Adams~III {\em et~al.}(2006)Adams~III, Zarter, Mueh, Demmig-Adams,
+  {\em et~al.}]{adams2006energy}
+Adams~III, W., Zarter, C., Mueh, K., Demmig-Adams, B., {\em et~al.} (2006).
+\newblock Energy dissipation and photoinhibition: a continuum of
+  photoprotection.
+\newblock In {\em Photoprotection, photoinhibition, gene regulation, and
+  environment\/}, pages 49--64.
 
-\bibitem{asada1996radical}
-Asada K (1996) Radical production and scavenging in the chloroplasts.
-\newblock In: Photosynthesis and the Environment, Springer. pp. 123--150.
-\bibAnnoteFile{asada1996radical}
+\bibitem[Asada(1996)Asada]{asada1996radical}
+Asada, K. (1996).
+\newblock Radical production and scavenging in the chloroplasts.
+\newblock In {\em Photosynthesis and the Environment\/}, pages 123--150.
+  Springer.
 
-\bibitem{durrant1990characterisation}
-Durrant J, Giorgi L, Barber J, Klug D, Porter G (1990) Characterisation of
-  triplet states in isolated photosystem ii reaction centres: oxygen quenching
-  as a mechanism for photodamage.
-\newblock Biochimica et Biophysica Acta (BBA)-Bioenergetics 1017: 167--175.
-\bibAnnoteFile{durrant1990characterisation}
+\bibitem[Boyes {\em et~al.}(2001)Boyes, Zayed, Ascenzi, McCaskill, Hoffman,
+  Davis, and G{\"o}rlach]{boyes2001growth}
+Boyes, D., Zayed, A., Ascenzi, R., McCaskill, A., Hoffman, N., Davis, K., and
+  G{\"o}rlach, J. (2001).
+\newblock Growth stage--based phenotypic analysis of arabidopsis a model for
+  high throughput functional genomics in plants.
+\newblock {\em Plant Cell\/}, {\bf 13}(7), 1499--1510.
 
-\bibitem{melis1999photosystem}
-Melis A (1999) Photosystem-ii damage and repair cycle in chloroplasts: what
-  modulates the rate of photodamage in vivo?
-\newblock Trends Plant Sci 4: 130--135.
-\bibAnnoteFile{melis1999photosystem}
+\bibitem[Buckley {\em et~al.}(1997)Buckley, Farquhar, and Mott]{Buckley1997}
+Buckley, T., Farquhar, G., and Mott, K. (1997).
+\newblock Qualitative effects of patchy stomatal conductance distribution
+  features on gas-exchange calculations.
+\newblock {\em Plant Cell Environ\/}, {\bf 20}, 867--880.
 
-\bibitem{adams2006energy}
-Adams~III W, Zarter C, Mueh K, Demmig-Adams B, et~al. (2006) Energy dissipation
-  and photoinhibition: a continuum of photoprotection.
-\newblock In: Photoprotection, photoinhibition, gene regulation, and
-  environment. pp. 49--64.
-\bibAnnoteFile{adams2006energy}
-
-\bibitem{rochaix2014regulation}
-Rochaix J (2014) Regulation and dynamics of the light-harvesting system.
-\newblock Annu Rev Plant Biol 65: 287--309.
-\bibAnnoteFile{rochaix2014regulation}
-
-\bibitem{meng2007spatial}
-Meng C, Xu M, Li J, Gao S (2007) Spatial heterogeneity of photosynthetic
-  characteristics of castanopsis fargesii canopy.
-\newblock J Appl Ecol 18: 1932--1936.
-\bibAnnoteFile{meng2007spatial}
-
-\bibitem{Buckley1997}
-Buckley T, Farquhar G, Mott K (1997) Qualitative effects of patchy stomatal
-  conductance distribution features on gas-exchange calculations.
-\newblock Plant Cell Environ 20: 867-880.
-\bibAnnoteFile{Buckley1997}
-
-\bibitem{Cheeseman1991}
-Cheeseman J (1991) Patchy - simulating and visualizing the effects of stomatal
+\bibitem[Cheeseman(1991)Cheeseman]{Cheeseman1991}
+Cheeseman, J. (1991).
+\newblock Patchy - simulating and visualizing the effects of stomatal
   patchiness on photosynthetic co2 exchange studies.
-\newblock Plant Cell Environ 14: 593-599.
-\bibAnnoteFile{Cheeseman1991}
+\newblock {\em Plant Cell Environ\/}, {\bf 14}, 593--599.
 
-\bibitem{chen2008effect}
-Chen C, Zhu X, Long S (2008) The effect of leaf-level spatial variability in
-  photosynthetic capacity on biochemical parameter estimates using the farquhar
-  model: a theoretical analysis.
-\newblock Plant Physiol 148: 1139--1147.
-\bibAnnoteFile{chen2008effect}
+\bibitem[Chen {\em et~al.}(2008)Chen, Zhu, and Long]{chen2008effect}
+Chen, C., Zhu, X., and Long, S. (2008).
+\newblock The effect of leaf-level spatial variability in photosynthetic
+  capacity on biochemical parameter estimates using the farquhar model: a
+  theoretical analysis.
+\newblock {\em Plant Physiol\/}, {\bf 148}(2), 1139--1147.
 
-\bibitem{Kitajima2002}
-Kitajima K, Mulkey S, Samaniego M, Wright S (2002) Decline of photosynthetic
-  capacity with leaf age and position in two tropical pioneer tree species.
-\newblock Am J Bot 89: 1925-1932.
-\bibAnnoteFile{Kitajima2002}
-
-\bibitem{farquhar2001models}
-Farquhar G, von Caemmerer S, Berry J (2001) Models of photosynthesis.
-\newblock Plant Physiol 125: 42--45.
-\bibAnnoteFile{farquhar2001models}
-
-\bibitem{sharkey1985o2}
-Sharkey T (1985) O2-insensitive photosynthesis in c3 plants its occurrence and
-  a possible explanation.
-\newblock Plant Physiol 78: 71--75.
-\bibAnnoteFile{sharkey1985o2}
-
-\bibitem{cruz2014depi}
-Cruz J, Savage L, Zegarac R, Kovac W, Hall C, et~al. (2014) Dynamic
-  environmental photosynthetic imaging (depi) reveals emergent phenotypes
-  related to the environmental responses of photosynthesis.
-\newblock Nat Biotech in revision.
-\bibAnnoteFile{cruz2014depi}
-
-\bibitem{tiihonen1996cerebral}
-Tiihonen J, Kuikka J, R{\"a}s{\"a}nen P, Lepola U, Koponen H, et~al. (1996)
-  Cerebral benzodiazepine receptor binding and distribution in generalized
-  anxiety disorder: a fractal analysis.
-\newblock Mol Psychiatr 2: 463--471.
-\bibAnnoteFile{tiihonen1996cerebral}
-
-\bibitem{wieneke1999non}
-Wieneke H, Zander C, Eising E, Haude M, Bockisch A, et~al. (1999) Non-invasive
-  characterization of cardiac microvascular disease by nuclear medicine using
-  single-photon emission tomography.
-\newblock Herz 24: 515--521.
-\bibAnnoteFile{wieneke1999non}
-
-\bibitem{wang2000}
-Wang N, Wilkin C, Bocking A, Tribukait B (1999) Evaluation of tumor
-  heterogeneity of prostate carcinoma by flow- and image dna cytometry and
-  histopathological grading.
-\newblock Anal Cell Pathol 20: 49-62.
-\bibAnnoteFile{wang2000}
-
-\bibitem{houle2010phenomics}
-Houle D, Govindaraju D, Omholt S (2010) Phenomics: the next challenge.
-\newblock Nat Rev Genet 11: 855--866.
-\bibAnnoteFile{houle2010phenomics}
-
-\bibitem{wituszynska2013multivariable}
-Wituszynska W, Galazka K, Rusaczonek A, Vanderauwera S, Van~Breusegem F, et~al.
-  (2013) Multivariable environmental conditions promote photosynthetic
-  adaptation potential in arabidopsis thaliana.
-\newblock Plant Physiol 170: 548--559.
-\bibAnnoteFile{wituszynska2013multivariable}
-
-\bibitem{fiorani2013future}
-Fiorani F, Schurr U (2013) Future scenarios for plant phenotyping.
-\newblock Annu Rev Plant Biol 64: 267--291.
-\bibAnnoteFile{fiorani2013future}
-
-\bibitem{rascher2011non}
-Rascher U, Blossfeld S, Fiorani F, et~al. (2011) Non-invasive approaches for
-  phenotyping of enhanced performance traits in bean.
-\newblock Funct Plant Biol 38: 968--983.
-\bibAnnoteFile{rascher2011non}
-
-\bibitem{conover1999Practical}
-Conover W (1999) Practical Nonparametric Statistics.
+\bibitem[Conover(1999)Conover]{conover1999Practical}
+Conover, W. (1999).
+\newblock {\em Practical Nonparametric Statistics\/}.
 \newblock John Wiley and Sons, New York.
-\bibAnnoteFile{conover1999Practical}
 
-\bibitem{higgins2003measuring}
-Higgins J, Thompson S, Deeks J, Altman D (2003) Measuring inconsistency in
-  meta-analyses.
-\newblock Brit Med J 327: 557--560.
-\bibAnnoteFile{higgins2003measuring}
+\bibitem[Cruz {\em et~al.}(2014)Cruz, Savage, Zegarac, Kovac, Hall, Chen, and
+  Kramer]{cruz2014depi}
+Cruz, J., Savage, L., Zegarac, R., Kovac, W., Hall, C., Chen, J., and Kramer,
+  D. (2014).
+\newblock Dynamic environmental photosynthetic imaging (depi) reveals emergent
+  phenotypes related to the environmental responses of photosynthesis.
+\newblock {\em Nat Biotech\/}, {\bf in revision}.
 
-\bibitem{higgins2002quantifying}
-Higgins J, Thompson S (2002) Quantifying heterogeneity in a meta-analysis.
-\newblock Stat Med 21: 1539--1558.
-\bibAnnoteFile{higgins2002quantifying}
+\bibitem[Durrant {\em et~al.}(1990)Durrant, Giorgi, Barber, Klug, and
+  Porter]{durrant1990characterisation}
+Durrant, J., Giorgi, L., Barber, J., Klug, D., and Porter, G. (1990).
+\newblock Characterisation of triplet states in isolated photosystem ii
+  reaction centres: oxygen quenching as a mechanism for photodamage.
+\newblock {\em Biochimica et Biophysica Acta (BBA)-Bioenergetics\/}, {\bf
+  1017}(2), 167--175.
 
-\bibitem{gavaghan2000evaluation}
-Gavaghan D, Moore R, McQuay H (2000) An evaluation of homogeneity tests in
-  meta-analyses in pain using simulations of individual patient data.
-\newblock Pain 85: 415--424.
-\bibAnnoteFile{gavaghan2000evaluation}
+\bibitem[Farquhar {\em et~al.}(2001)Farquhar, von Caemmerer, and
+  Berry]{farquhar2001models}
+Farquhar, G., von Caemmerer, S., and Berry, J. (2001).
+\newblock Models of photosynthesis.
+\newblock {\em Plant Physiol\/}, {\bf 125}(1), 42--45.
 
-\bibitem{huedo2006assessing}
-Huedo-Medina T, Sanchez-Meca J, Marin-Martinez F, Botella J (2006) Assessing
-  heterogeneity in meta-analysis: Q statistic or $i^2$ index?
-\newblock Psychol Methods 11: 193.
-\bibAnnoteFile{huedo2006assessing}
+\bibitem[Fiorani and Schurr(2013)Fiorani and Schurr]{fiorani2013future}
+Fiorani, F. and Schurr, U. (2013).
+\newblock Future scenarios for plant phenotyping.
+\newblock {\em Annu Rev Plant Biol\/}, {\bf 64}, 267--291.
 
-\bibitem{ioannidis2007uncertainty}
-Ioannidis J, Patsopoulos N, Evangelou E (2007) Uncertainty in heterogeneity
-  estimates in meta-analyses.
-\newblock Brit Med J 335: 914--916.
-\bibAnnoteFile{ioannidis2007uncertainty}
+\bibitem[Gavaghan {\em et~al.}(2000)Gavaghan, Moore, and
+  McQuay]{gavaghan2000evaluation}
+Gavaghan, D., Moore, R., and McQuay, H. (2000).
+\newblock An evaluation of homogeneity tests in meta-analyses in pain using
+  simulations of individual patient data.
+\newblock {\em Pain\/}, {\bf 85}(3), 415--424.
 
-\bibitem{van1991insertional}
-Van~Lijsebettens M, Vanderhaeghen R, Van~Montagu M (1991) Insertional
-  mutagenesis in arabidopsis thaliana: isolation of a t-dna-linked mutation
-  that alters leaf morphology.
-\newblock Theo Appl Genet 81: 277--284.
-\bibAnnoteFile{van1991insertional}
+\bibitem[Gegas {\em et~al.}(2014)Gegas, Wargent, Pesquet, Granqvist, Paul, and
+  Doonan]{gegas2014endopolyploidy}
+Gegas, V., Wargent, J., Pesquet, E., Granqvist, E., Paul, N., and Doonan, J.
+  (2014).
+\newblock Endopolyploidy as a potential alternative adaptive strategy for
+  arabidopsis leaf size variation in response to uv-b.
+\newblock {\em J Exp Bot\/}, page ert473.
 
-\bibitem{hedges1998fixed}
-Hedges L, Vevea J (1998) Fixed-and random-effects models in meta-analysis.
-\newblock Psychol Methods 3: 486.
-\bibAnnoteFile{hedges1998fixed}
-
-\bibitem{hedge1985statistical}
-Hedges L, Olkin I (1985) Statistical methods for meta-analysis.
+\bibitem[Hedges and Olkin(1985)Hedges and Olkin]{hedge1985statistical}
+Hedges, L. and Olkin, I. (1985).
+\newblock {\em Statistical methods for meta-analysis\/}.
 \newblock Orlando: Academic.
-\bibAnnoteFile{hedge1985statistical}
 
-\bibitem{boyes2001growth}
-Boyes D, Zayed A, Ascenzi R, McCaskill A, Hoffman N, et~al. (2001) Growth
-  stage--based phenotypic analysis of arabidopsis a model for high throughput
-  functional genomics in plants.
-\newblock Plant Cell 13: 1499--1510.
-\bibAnnoteFile{boyes2001growth}
+\bibitem[Hedges and Pigott(2001)Hedges and Pigott]{hedges2001power}
+Hedges, L. and Pigott, T. (2001).
+\newblock The power of statistical tests in meta-analysis.
+\newblock {\em Psychol Methods\/}, {\bf 6}(3), 203.
 
-\bibitem{tessmer2013functional}
-Tessmer O, Jiao Y, Cruz J, Kramer D, Chen J (2013) Functional approach to
-  high-throughput plant growth analysis.
-\newblock BMC Syst Biol 7: S17.
-\bibAnnoteFile{tessmer2013functional}
+\bibitem[Hedges and Vevea(1998)Hedges and Vevea]{hedges1998fixed}
+Hedges, L. and Vevea, J. (1998).
+\newblock Fixed-and random-effects models in meta-analysis.
+\newblock {\em Psychol Methods\/}, {\bf 3}(4), 486.
 
-\bibitem{Richards1959}
-Richards F (1959) A flexible growth function for empirical use.
-\newblock J Exp Bot 10: 290-300.
-\bibAnnoteFile{Richards1959}
+\bibitem[Higgins and Thompson(2002)Higgins and
+  Thompson]{higgins2002quantifying}
+Higgins, J. and Thompson, S. (2002).
+\newblock Quantifying heterogeneity in a meta-analysis.
+\newblock {\em Stat Med\/}, {\bf 21}(11), 1539--1558.
 
-\bibitem{hunt1982plant}
-Hunt R (1982) Plant growth curves - The functional approach to plant growth
-  analysis.
+\bibitem[Higgins {\em et~al.}(2003)Higgins, Thompson, Deeks, and
+  Altman]{higgins2003measuring}
+Higgins, J., Thompson, S., Deeks, J., and Altman, D. (2003).
+\newblock Measuring inconsistency in meta-analyses.
+\newblock {\em Brit Med J\/}, {\bf 327}(7414), 557--560.
+
+\bibitem[Houle {\em et~al.}(2010)Houle, Govindaraju, and
+  Omholt]{houle2010phenomics}
+Houle, D., Govindaraju, D., and Omholt, S. (2010).
+\newblock Phenomics: the next challenge.
+\newblock {\em Nat Rev Genet\/}, {\bf 11}(12), 855--866.
+
+\bibitem[Huedo-Medina {\em et~al.}(2006)Huedo-Medina, Sanchez-Meca,
+  Marin-Martinez, and Botella]{huedo2006assessing}
+Huedo-Medina, T., Sanchez-Meca, J., Marin-Martinez, F., and Botella, J. (2006).
+\newblock Assessing heterogeneity in meta-analysis: Q statistic or $i^2$ index?
+\newblock {\em Psychol Methods\/}, {\bf 11}(2), 193.
+
+\bibitem[Hunt(1982)Hunt]{hunt1982plant}
+Hunt, R. (1982).
+\newblock {\em Plant growth curves - The functional approach to plant growth
+  analysis.}
 \newblock London: Edward Arnold.
-\bibAnnoteFile{hunt1982plant}
 
-\bibitem{gegas2014endopolyploidy}
-Gegas V, Wargent J, Pesquet E, Granqvist E, Paul N, et~al. (2014)
-  Endopolyploidy as a potential alternative adaptive strategy for arabidopsis
-  leaf size variation in response to uv-b.
-\newblock J Exp Bot : ert473.
-\bibAnnoteFile{gegas2014endopolyploidy}
+\bibitem[Ioannidis {\em et~al.}(2007)Ioannidis, Patsopoulos, and
+  Evangelou]{ioannidis2007uncertainty}
+Ioannidis, J., Patsopoulos, N., and Evangelou, E. (2007).
+\newblock Uncertainty in heterogeneity estimates in meta-analyses.
+\newblock {\em Brit Med J\/}, {\bf 335}(7626), 914--916.
 
-\bibitem{xi2014tracking}
-Yin X, Liu X, Chen J, Kramer D (2014) Multi-leaf tracking from fluorescence
-  plant videos.
-\newblock IEEE International Conference on Image Processing .
-\bibAnnoteFile{xi2014tracking}
+\bibitem[Kitajima {\em et~al.}(2002)Kitajima, Mulkey, Samaniego, and
+  Wright]{Kitajima2002}
+Kitajima, K., Mulkey, S., Samaniego, M., and Wright, S. (2002).
+\newblock Decline of photosynthetic capacity with leaf age and position in two
+  tropical pioneer tree species.
+\newblock {\em Am. J. Bot.}, {\bf 89}(12), 1925--1932.
 
-\bibitem{yin2014}
-Yin X, Liu X, Chen J, Kramer D (2014) Multi-leaf alignment from fluorescence
-  plant images.
-\newblock IEEE Winter Conference on Applications of Computer Vision : 437--444.
-\bibAnnoteFile{yin2014}
+\bibitem[Kramer and Evans(2011)Kramer and Evans]{kramer2011importance}
+Kramer, D. and Evans, J. (2011).
+\newblock The importance of energy balance in improving photosynthetic
+  productivity.
+\newblock {\em Plant Physiol\/}, {\bf 155}(1), 70--78.
 
-\bibitem{song1999exploring}
-Song F (1999) Exploring heterogeneity in meta-analysis: is the l'abbe plot
-  useful?
-\newblock Journal Clin Epidemiol 52: 725--730.
-\bibAnnoteFile{song1999exploring}
+\bibitem[Melis(1999)Melis]{melis1999photosystem}
+Melis, A. (1999).
+\newblock Photosystem-ii damage and repair cycle in chloroplasts: what
+  modulates the rate of photodamage in vivo?
+\newblock {\em Trends Plant Sci\/}, {\bf 4}(4), 130--135.
 
-\bibitem{toet1996new}
-Toet A, Walraven J (1996) New false color mapping for image fusion.
-\newblock Opt Eng 35: 650--658.
-\bibAnnoteFile{toet1996new}
+\bibitem[Meng {\em et~al.}(2007)Meng, Xu, Li, and Gao]{meng2007spatial}
+Meng, C., Xu, M., Li, J., and Gao, S. (2007).
+\newblock Spatial heterogeneity of photosynthetic characteristics of
+  castanopsis fargesii canopy.
+\newblock {\em J Appl Ecol\/}, {\bf 18}(9), 1932--1936.
 
-\bibitem{OSullivan2003}
-O'Sullivan F, Roy S, Eary J (2003) A statistical measure of tissue
-  heterogeneity with application to 3d pet sarcoma data.
-\newblock Biostat 4: 433-448.
-\bibAnnoteFile{OSullivan2003}
+\bibitem[O'Sullivan {\em et~al.}(2003)O'Sullivan, Roy, and Eary]{OSullivan2003}
+O'Sullivan, F., Roy, S., and Eary, J. (2003).
+\newblock A statistical measure of tissue heterogeneity with application to 3d
+  pet sarcoma data.
+\newblock {\em Biostat\/}, {\bf 4}(3), 433--448.
 
-\bibitem{hedges2001power}
-Hedges L, Pigott T (2001) The power of statistical tests in meta-analysis.
-\newblock Psychol Methods 6: 203.
-\bibAnnoteFile{hedges2001power}
+\bibitem[Rascher {\em et~al.}(2011)Rascher, Blossfeld, Fiorani, {\em
+  et~al.}]{rascher2011non}
+Rascher, U., Blossfeld, S., Fiorani, F., {\em et~al.} (2011).
+\newblock Non-invasive approaches for phenotyping of enhanced performance
+  traits in bean.
+\newblock {\em Funct Plant Biol\/}, {\bf 38}(12), 968--983.
+
+\bibitem[Richards(1959)Richards]{Richards1959}
+Richards, F. (1959).
+\newblock A flexible growth function for empirical use.
+\newblock {\em J Exp Bot\/}, {\bf 10}, 290--300.
+
+\bibitem[Rochaix(2014)Rochaix]{rochaix2014regulation}
+Rochaix, J. (2014).
+\newblock Regulation and dynamics of the light-harvesting system.
+\newblock {\em Annu Rev Plant Biol\/}, {\bf 65}, 287--309.
+
+\bibitem[Sharkey(1985)Sharkey]{sharkey1985o2}
+Sharkey, T. (1985).
+\newblock O2-insensitive photosynthesis in c3 plants its occurrence and a
+  possible explanation.
+\newblock {\em Plant Physiol\/}, {\bf 78}(1), 71--75.
+
+\bibitem[Song(1999)Song]{song1999exploring}
+Song, F. (1999).
+\newblock Exploring heterogeneity in meta-analysis: is the l'abbe plot useful?
+\newblock {\em Journal Clin Epidemiol\/}, {\bf 52}(8), 725--730.
+
+\bibitem[Tessmer {\em et~al.}(2013)Tessmer, Jiao, Cruz, Kramer, and
+  Chen]{tessmer2013functional}
+Tessmer, O., Jiao, Y., Cruz, J., Kramer, D., and Chen, J. (2013).
+\newblock Functional approach to high-throughput plant growth analysis.
+\newblock {\em BMC Syst Biol\/}, {\bf 7}(Suppl 6), S17.
+
+\bibitem[Tiihonen {\em et~al.}(1996)Tiihonen, Kuikka, R{\"a}s{\"a}nen, Lepola,
+  Koponen, Liuska, Lehmusvaara, Vainio, K{\"o}n{\"o}nen, Bergstr{\"o}m, {\em
+  et~al.}]{tiihonen1996cerebral}
+Tiihonen, J., Kuikka, J., R{\"a}s{\"a}nen, P., Lepola, U., Koponen, H., Liuska,
+  A., Lehmusvaara, A., Vainio, P., K{\"o}n{\"o}nen, M., Bergstr{\"o}m, K., {\em
+  et~al.} (1996).
+\newblock Cerebral benzodiazepine receptor binding and distribution in
+  generalized anxiety disorder: a fractal analysis.
+\newblock {\em Mol Psychiatr\/}, {\bf 2}(6), 463--471.
+
+\bibitem[Toet and Walraven(1996)Toet and Walraven]{toet1996new}
+Toet, A. and Walraven, J. (1996).
+\newblock New false color mapping for image fusion.
+\newblock {\em Opt Eng\/}, {\bf 35}(3), 650--658.
+
+\bibitem[Van~Lijsebettens {\em et~al.}(1991)Van~Lijsebettens, Vanderhaeghen,
+  and Van~Montagu]{van1991insertional}
+Van~Lijsebettens, M., Vanderhaeghen, R., and Van~Montagu, M. (1991).
+\newblock Insertional mutagenesis in arabidopsis thaliana: isolation of a
+  t-dna-linked mutation that alters leaf morphology.
+\newblock {\em Theo Appl Genet\/}, {\bf 81}(2), 277--284.
+
+\bibitem[Wang {\em et~al.}(1999)Wang, Wilkin, Bocking, and Tribukait]{wang2000}
+Wang, N., Wilkin, C., Bocking, A., and Tribukait, B. (1999).
+\newblock Evaluation of tumor heterogeneity of prostate carcinoma by flow- and
+  image dna cytometry and histopathological grading.
+\newblock {\em Anal Cell Pathol\/}, {\bf 20}, 49--62.
+
+\bibitem[Wieneke {\em et~al.}(1999)Wieneke, Zander, Eising, Haude, Bockisch,
+  and Erbel]{wieneke1999non}
+Wieneke, H., Zander, C., Eising, E., Haude, M., Bockisch, A., and Erbel, R.
+  (1999).
+\newblock Non-invasive characterization of cardiac microvascular disease by
+  nuclear medicine using single-photon emission tomography.
+\newblock {\em Herz\/}, {\bf 24}(7), 515--521.
+
+\bibitem[Wituszynska {\em et~al.}(2013)Wituszynska, Galazka, Rusaczonek,
+  Vanderauwera, Van~Breusegem, and Karpinski]{wituszynska2013multivariable}
+Wituszynska, W., Galazka, K., Rusaczonek, A., Vanderauwera, S., Van~Breusegem,
+  F., and Karpinski, S. (2013).
+\newblock Multivariable environmental conditions promote photosynthetic
+  adaptation potential in arabidopsis thaliana.
+\newblock {\em Plant Physiol\/}, {\bf 170}(6), 548--559.
+
+\bibitem[Yin {\em et~al.}(2014a)Yin, Liu, Chen, and Kramer]{yin2014}
+Yin, X., Liu, X., Chen, J., and Kramer, D. (2014a).
+\newblock Multi-leaf alignment from fluorescence plant images.
+\newblock {\em IEEE Winter Conference on Applications of Computer Vision\/},
+  pages 437--444.
+
+\bibitem[Yin {\em et~al.}(2014b)Yin, Liu, Chen, and Kramer]{xi2014tracking}
+Yin, X., Liu, X., Chen, J., and Kramer, D. (2014b).
+\newblock Multi-leaf tracking from fluorescence plant videos.
+\newblock {\em IEEE International Conference on Image Processing\/}.
 
 \end{thebibliography}
