@@ -152,6 +152,13 @@ Kramer, D. and Evans, J. (2011).
   productivity.
 \newblock {\em Plant Physiol\/}, {\bf 155}(1), 70--78.
 
+\bibitem[Kriegel {\em et~al.}(2011)Kriegel, Kr{\"o}ger, Sander, and
+  Zimek]{kriegel2011density}
+Kriegel, H.-P., Kr{\"o}ger, P., Sander, J., and Zimek, A. (2011).
+\newblock Density-based clustering.
+\newblock {\em Wiley Interdisciplinary Reviews: Data Mining and Knowledge
+  Discovery\/}, {\bf 1}(3), 231--240.
+
 \bibitem[Melis(1999)Melis]{melis1999photosystem}
 Melis, A. (1999).
 \newblock Photosystem-ii damage and repair cycle in chloroplasts: what
@@ -258,5 +265,11 @@ Yin, X., Liu, X., Chen, J., and Kramer, D. (2014a).
 Yin, X., Liu, X., Chen, J., and Kramer, D. (2014b).
 \newblock Multi-leaf tracking from fluorescence plant videos.
 \newblock {\em IEEE International Conference on Image Processing\/}.
+
+\bibitem[Za{\"\i}ane and Lee(2002)Za{\"\i}ane and Lee]{zaiane2002clustering}
+Za{\"\i}ane, O.~R. and Lee, C.-H. (2002).
+\newblock Clustering spatial data when facing physical constraints.
+\newblock In {\em Data Mining, 2002. ICDM 2003. Proceedings. 2002 IEEE
+  International Conference on\/}, pages 737--740. IEEE.
 
 \end{thebibliography}
