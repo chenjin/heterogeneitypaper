@@ -876,9 +876,10 @@
 
 @article{yin2014,
   title={Multi-leaf Alignment from Fluorescence Plant Images},
-  author={Yin, X. and Liu, X. and Chen, J. and Kramer, D.M.},
-  journal =      {IEEE Winter Conference on Applications of Computer Vision},
-  year = {2014}
+  author={Yin, X and Liu, X and Chen, J and Kramer, DM},
+  journal = {IEEE Winter Conference on Applications of Computer Vision},
+  year = {2014},
+  pages ={437--444}
 }
 
 @article{Tiihonen1997,
@@ -896,7 +897,7 @@
   journal = {Herz},
   year = {1999},
   volume ={24},
-  pages = {515?21}
+  pages = {515-521}
 }
 
 @article{Wang2000,
@@ -924,7 +925,7 @@
   journal = {Plant Cell Environ},
   year = {1991},
   volume ={14},
-  pages = {593?99}
+  pages = {593-599}
 }
 
 @article{Buckley1997,
@@ -933,7 +934,7 @@
   journal = {Plant Cell Environ},
   year = {1997},
   volume ={20},
-  pages = {867?80}
+  pages = {867-880}
 }
 
 @article{Kitajima2002,
@@ -1267,4 +1268,21 @@
   number={7},
   pages={1499--1510},
   year={2001}
+}
+
+@article{xi2014tracking,
+  title={Multi-leaf tracking from fluorescence plant videos},
+  author={Yin, X and Liu, X and Chen, J and Kramer, DM},
+  journal={IEEE International Conference on Image Processing},
+  year={2014}
+}
+
+@article{song1999exploring,
+  title={Exploring heterogeneity in meta-analysis: is the L'Abbe plot useful?},
+  author={Song, F},
+  journal={Journal Clin Epidemiol},
+  volume={52},
+  number={8},
+  pages={725--730},
+  year={1999}
 }
