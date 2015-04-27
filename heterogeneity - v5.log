@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.12.5)  20 APR 2015 14:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.12.5)  22 APR 2015 10:34
 entering extended mode
 **C:/Users/Jin*Chen/Desktop/Dropbox/+++leaf*morphology/++paper*leaf*level*heter
 ogeneity*2014/ms/heterogeneitypaper/heterogeneity*-*v5.tex
@@ -594,19 +594,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 
-Underfull \hbox (badness 1231) in paragraph at lines 64--65
-\OT1/ptm/m/n/9 to oxidative damage, especially under stress conditions when
- []
-
-
-Underfull \hbox (badness 1502) in paragraph at lines 64--65
-\OT1/ptm/m/n/9 the supply of light energy exceeds the capacity to utilize it
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 64--65
-\OT1/ptm/m/n/9 (Durrant \OT1/ptm/m/it/9 et al.\OT1/ptm/m/n/9 , 1990; Asada, 199
-6). Plants have evolved a
+Underfull \hbox (badness 1783) in paragraph at lines 64--65
+\OT1/ptm/m/n/9 By consuming water, light and $\OML/ptmcm/m/it/9 CO[]$\OT1/ptm/m
+/n/9 , plants produce sugars
  []
 
 
@@ -622,11 +612,6 @@ Underfull \hbox (badness 1275) in paragraph at lines 64--65
 
 Underfull \hbox (badness 2538) in paragraph at lines 64--65
 \OT1/ptm/m/n/9 may change from one leave tissue to another, resulting in
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 64--65
-\OT1/ptm/m/n/9 also vary with the position, size and growth rate of leaves,
  []
 
 <example1.PNG, id=1, 273.4215pt x 250.536pt>
@@ -653,22 +638,23 @@ File: example2-hist.PNG Graphic file (type png)
 Package pdftex.def Info: example2-hist.PNG used on input line 71.
 (pdftex.def)             Requested size: 97.19852pt x 89.06514pt.
 
-Underfull \hbox (badness 1540) in paragraph at lines 83--84
-[]\OT1/ptm/m/n/9 Heterogeneity is a concept relating to the uniformity in a
+Underfull \hbox (badness 1281) in paragraph at lines 83--84
+\OT1/ptm/m/n/9 heterogeneity studies can range from cells to tissues, leaves,
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1810) in paragraph at lines 83--84
+\OT1/ptm/m/n/9 heterogeneity is a key towards processing and understanding
+ []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 87.
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 87.
-
+(Font)              scaled to size 6.29996pt on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 88.
 (C:\CTEX\MiKTeX\tex\latex\psnfss\omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
  [1
 
 {C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
@@ -730,43 +716,27 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
  []
 
 [2]
-Underfull \hbox (badness 2005) in paragraph at lines 253--256
+Underfull \hbox (badness 2005) in paragraph at lines 266--269
 \OT1/ptm/m/n/9 (wild type and genetic variations with gene knockout) were
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 257--262
+Underfull \hbox (badness 1237) in paragraph at lines 270--275
 \OT1/ptm/m/n/9 to remove the background, identify every piece of leaf (Yin
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 257--262
+Underfull \hbox (badness 1354) in paragraph at lines 270--275
 \OT1/ptm/m/n/9 of photosynthesis parameters. The extracted measurements of
  []
 
 
 LaTeX Warning: Reference `fig:architecture' on page 3 undefined on input line 2
-67.
+80.
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 279--280
+Underfull \hbox (badness 2680) in paragraph at lines 292--293
 \OT1/ptm/m/n/9 images are false-color images, where the light intensity of
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 281--282
-[]\OT1/ptm/m/n/9 We have developed a framework based on the well-known
- []
-
-
-Underfull \hbox (badness 2229) in paragraph at lines 281--282
-\OT1/ptm/m/n/9 Chamfer Matching algorithm (Yin \OT1/ptm/m/it/9 et al.\OT1/ptm/m
-/n/9 , 2014a). Multi-leaf
- []
-
-
-Underfull \hbox (badness 3009) in paragraph at lines 283--286
-[]\OT1/ptm/m/n/9 Multi-leaf tracking is an extension of the leaf alignment
  []
 
 
@@ -778,27 +748,43 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 1509) in paragraph at lines 316--319
+Underfull \hbox (badness 1231) in paragraph at lines 294--295
+[]\OT1/ptm/m/n/9 We have developed a framework based on the well-known
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 294--295
+\OT1/ptm/m/n/9 Chamfer Matching algorithm (Yin \OT1/ptm/m/it/9 et al.\OT1/ptm/m
+/n/9 , 2014a). Multi-leaf
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 296--299
+[]\OT1/ptm/m/n/9 Multi-leaf tracking is an extension of the leaf alignment
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 332--335
 \OT1/ptm/m/n/9 across cells, tissues, and organs (), reflecting differences in
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 316--319
+Underfull \hbox (badness 2894) in paragraph at lines 332--335
 \OT1/ptm/m/n/9 development, stress responses, regulation of processes such
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 316--319
+Underfull \hbox (badness 1584) in paragraph at lines 332--335
 \OT1/ptm/m/n/9 as stomatal conductance (), photodamage (), and storage of
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 320--323
+Underfull \hbox (badness 3199) in paragraph at lines 336--339
 \OT1/ptm/m/n/9 from different latitudes show distinct heterogeneity patterns,
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 320--323
+Underfull \hbox (badness 1097) in paragraph at lines 336--339
 \OT1/ptm/m/n/9 implying that these responses are important for adaptation of
  []
 
@@ -816,9 +802,6 @@ m/m/it/7 et al. \OT1/ptm/m/n/7 (2006).
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
@@ -831,12 +814,21 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[4])
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 276--280
+\OT1/ptm/m/n/7 constraints.  In \OT1/ptm/m/it/7 Data Mining, 2002. ICDM 2003. P
+roceedings. 2002 IEEE
+ []
+
+)
 - LAST -
-Extra skip:0.0pt
-Left:82.0pt/1.51544pt
-Right:82.0pt/1.51544pt
-Output:82.0pt
+Extra skip:0.32207pt
+Left:415.0pt/0.09793pt
+Right:414.67793pt/1.51544pt
+Output:415.0pt
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -857,13 +849,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4777 strings out of 495354
- 61823 string characters out of 3183859
- 135553 words of memory out of 3000000
- 7725 multiletter control sequences out of 15000+200000
+ 4781 strings out of 495354
+ 61898 string characters out of 3183859
+ 159276 words of memory out of 3000000
+ 7729 multiletter control sequences out of 15000+200000
  100963 words of font info for 210 fonts, out of 3000000 for 9000
  18 hyphenation exceptions out of 8191
- 42i,12n,26p,1574b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,26p,1884b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
 i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTe
@@ -874,7 +866,7 @@ TEX/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw
 TEX/UserData/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/ti
 mes/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on "heterogeneity - v5.pdf" (5 pages, 576934 bytes).
+Output written on "heterogeneity - v5.pdf" (5 pages, 582796 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

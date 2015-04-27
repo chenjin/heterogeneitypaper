@@ -84,7 +84,7 @@ Heterogeneity is a concept relating to the uniformity in a substance. The granul
 
 The leaf heterogeneity in photosynthesis was firstly been studied  with a simulation model \citep{chen2008effect}. Due to the lack of high-throughput phenotyping technologies, the authors determined the effects of biochemical variability via the Farquhar model (a mechanistic, biochemical model widely used to describe steady-state $CO_2$ assimilation in leaves) incorporating defined degrees of spatial variability of its parameters~\citep{sharkey1985o2,farquhar2001models}. Spatial heterogeneity in photosynthesis was found to affect the ability of the Farquhar model to accurately characterize photosynthesis at the leaf level \citep{chen2008effect}.
 
-Recently, with the advent of advanced technologies of biomedical imaging, directly measuring heterogeneity has recently assumed new importance~\citep{tiihonen1996cerebral,wieneke1999non,wang2000,cruz2014depi}. The rapid development of lighting and imaging techniques enables real-time non-invasive monitoring of photosynthesis \citep{houle2010phenomics,cruz2014depi}, resulting in vast amount of chlorophyll fluorescence images of plants \citep{wituszynska2013multivariable}. These images can be used to quantify photosynthetic behavior in genetically diverse populations, enabling to measure variability of photosynthetic parameters at high resolution across leaves, leading to better understanding of the underlying mechanisms that control the photosynthetic properties \citep{rascher2011non,fiorani2013future}. %However, there is no 
+Recently, with the advent of advanced technologies of biomedical imaging, directly measuring heterogeneity has recently assumed new importance~\citep{tiihonen1996cerebral,wieneke1999non,wang2000,cruz2014depi}. The rapid development of lighting and imaging techniques enables real-time non-invasive monitoring of photosynthesis \citep{houle2010phenomics,cruz2014depi}, resulting in vast amount of chlorophyll fluorescence images of plants \citep{wituszynska2013multivariable}. These images can be used to quantify photosynthetic behavior in genetically diverse populations, enabling to measure variability of photosynthetic parameters at high resolution across leaves, leading to better understanding of the underlying mechanisms that control the photosynthetic properties \citep{rascher2011non,fiorani2013future}. %However, there is no
 
 Measuring leaf-based photosynthetic variability in large-scale phenotyping experiments requires automatical identification of most of the visible leaves in all fluorescence images and an appropriate measurement for the variation of photosynthesis parameters across leaves that takes geometrical (leaf position and size), temporal (leaf growth rate) and physiological (leaf age) information into consideration. However, there is currently no existing infrastructure to analyze such amount of phenotype information. %The challenges of this work include not only the accurate leaf alignment in complex plant leaf layout, but also the development of a new heterogeneity measure that
 %
@@ -92,10 +92,18 @@ In this paper, we present a new computational framework called {\it Plant Photos
 %
 Overall, PlantPH has the following three advantages: %The mutant screen analysis reveals that ...
 \begin{enumerate}\vspace{-0.1in}
-  \item~~It is the first computational framework to automatic analyze plant leaf-level heterogeneity.
+  \item~~It is the first computational framework to measure plant leaf-level heterogeneity of photosynthesis with leaf size, position and growth rate.
   \item~It's performance is significantly better than the traditional heterogeneity tests that cannot fully use the spatial and temporal information in the fluorescence images.
   \item~It discovers multiple types of photosynthetic variabilities in a large scale experiment.
 \end{enumerate}
+
+%Comparing with the existing heterogeneity approaches, our method is novel in the following ways:
+%
+%1.	PlantPH
+%
+%2. PlantPH models heterogeneity ..
+%
+%3. PlantPH refers to the differences between individual leaf photosynthesis and the pooled photosynthesis across all the leaves, with the weights being those used in the pooling method. With PlantPH, transient regional variation events that do not affect the whole plant photosynthesis, can be easily discovered.
 
 
 %, in which hundreds of plants are screened simultaneously,
@@ -229,17 +237,24 @@ Specifically, in $PlantPH(area)$ we have $f(l_i)=area(l_i)$, which measures the 
 
 \subsection{PlantPH workflow}
 
-The input to the PlantPH measurement is leaf-level photosynthesis, which relies on leaf alignment and tracking~\citep{yin2014}. %By taking the biological knowledge about the shapes of any possible leaf into account, we add flexibility to the model to fit to all the general leaves. Specifically, for leaf boundary identification, we develop a leaf symmetry based curve fitting model to define the initial shape of a leaf, and develop a plant layout based approach to define leaf tips and orientation, therefore defining the leaf initial position.  Note that since leaf is assumed to be symmetric, curve fitting could converge without large amount of training.
+The input to the PlantPH measurement is leaf-level photosynthesis, which relies on leaf alignment and tracking~\citep{yin2014}. Leaf alignment is a recent developed algorithm to identify leaf boundaries from a serial of florescence images. XXX
 
-First of all, we have developed the leaf alignment algorithm \citep{yin2014}. The work focus on ...
+There are two obstacles preventing us from directly using the leaf alignment algorithm for leaf heterogeneity test. First, the leaf alignment process may fail when the leaf overlap rate exceeds 50\%, and the leaf boundary is not precisely identified because of the use of predefined leaf templates. Subsequently, the leftover of leaf alignment process on a plant image consists of partial leaves that are highly overlapped and leaf boundaries of the successfully recognized leaves (Fig. XX). Leaves covered by the other leaves are usually old leaves with diverse photosynthesis activities. Simply deleting them may cause inaccurate heterogeneity scores. Second, the leaf alignment process is time consuming. Processing a serial of 100 images each containing about 20 plants may take up to 5 hours. It is not practical to process all the phenotype images, which has occupied 30T space in our hard drive, array using leaf alignment.
 
-%Comparing with the existing heterogeneity approaches, our method is novel in the following ways:
+In this article, we introduce an efficient workflow for leaf heterogeneity test. We observe that the heterogeneous plant images are rare in the whole dataset. And the distribution of a homogenous plant usually falls into one normal distribution with a relative narrow range of phenotype values compared to the distribution of a heterogenous plant (Fig 1).
 %
-%1.	PlantPH 
-%
-%2. PlantPH models heterogeneity of photosynthesis with size, position and growth rate...
-%
-%3. PlantPH refers to the differences between individual leaf photosynthesis and the pooled photosynthesis across all the leaves, with the weights being those used in the pooling method. With PlantPH, transient regional variation events that do not affect the whole plant photosynthesis, can be easily discovered.
+Therefore, we screen all the plant images and only select those with relatively wide range of values (Equation XX) and pass them to the leaf alignment process. This process is efficient since it is very simple. Even though, it can quickly eliminate about 85\% of all the plant images, according to the results on the real data. Note that we do not use standard deviation of a similar measure because the distribution of a heterogeneous plant consists of multiple distributions and each of them may not be normal.
+
+\begin{equation}
+PlantRange(p_i) = max(p_i) - min(p_i)
+\end{equation}
+\noindent where $p_i$ is plant $i$, and max and min return the maximal and the minimum values of a plant photosynthetic parameter. Note that we delete top and bottom 2\% of the values to exclude outliers.
+
+\begin{equation}
+P-value(PlantRange(p_i)) =
+\end{equation}
+\noindent where the p-value is
+
 
 \end{methods}
 \section{Results}
@@ -278,10 +293,13 @@ The chlorophyll fluorescence images are false-color images, where the light inte
 
 We have developed a framework based on the well-known Chamfer Matching algorithm \citep{yin2014}. Multi-leaf alignment aims to segment all leaves with pre-defined leaf templates and estimate the two tip points of each leaf. The tracking algorithm consists of two steps. First, a set of leaf templates are applied to the target image to generate the same amount of leaf candidates. Second, we adopt multi-objective optimization to select a subset of leaf candidates. The objective is to select a minimal number of leaf candidates with smaller Chamfer distances to cover the test image mask as much as possible.
 
-Multi-leaf tracking is an extension of the leaf alignment algorithm. Given a serial of fluorescence images  taken over time, we first apply the alignment algorithm to the last frame, and then continuously apply template transformation to the current leaf candidates in order to fit to the previous frame. A new objective function considering the Chamfer Matching distances, target image mask, and the rotation angels of all leaves is adopted.
+Multi-leaf tracking is an extension of the leaf alignment algorithm. Given a serial of fluorescence images  taken over time, we first apply the alignment algorithm to the last frame, and then continuously apply template transformation to the current leaf candidates in order to fit to the previous frame. A new objective function considering the Chamfer Matching distances, target image mask, and the rotation angles of all leaves is adopted.
 %
 Both the leaf alignment and leaf tracking directly benefit the study of leaf behavior in plant biology, such as leaf growth, leaf-level photosynthesis, leaf-level variations in plant mutant, etc.
 
+\subsection{Refining leaf alignment with density-based clustering}
+
+Given that practically any algorithm for leaf tracking and alignment will fail in some cases, we have selected an alignment method that will typically fail by "missing" leaves (parts of the plant will be excluded from alignment results) rather than giving false positives (parts of the plant are over-selected or the background is selected as a leaf). This sort of failure allows us to add another step after the initial alignment in which we use DB Scan \citep{kriegel2011density} to intelligently cluster the non-segmented plant pixels into separate leaves. DB Scan was chosen for being practical, having relatively few parameters, and not depending on the pixel intensities. Using a clustering algorithm that relies heavily on pixel intensities would defeat the purpose of identifying leaves for our application: further down the pipeline we want to consider leaves that have large amounts of variation in intensity. DB Scan is widely understood and used for analysis of spatial information with physical constraints \citep{zaiane2002clustering}, and allows fine-tuning of the minimum thickness of the resulting clusters. Avoiding very thin clusters is also imperative to our application, given that a nearly-correct leaf segmentation may result in a thin band of non-segmented pixels around the edge of a leaf. Considering these pixels as a separate leaf would not be appropriate - setting a minimum-thickness guarantees that any such pixels would not be clustered. Similarly, a leaf with very few pixels is statistically insignificant and often misleading even if the leaf is genuine. By setting a minimum number of pixels per cluster we discard very small clusters even if they meet the minimum thickness requirement.
 
 \subsection{PlantPH on synthetic data}
 
