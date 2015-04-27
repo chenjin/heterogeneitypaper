@@ -61,7 +61,7 @@ Software is available at XXX.
 \section{Introduction}
 
 %[Phenotyping]
-By consuming water, light and $CO_2$, plants produce sugars and release $O_2$ with photosynthesis \citep{kramer2011importance}. The process involves the formation of high energy intermediates capable of generating reactive oxygen species. The photosynthetic apparatus, chloroplast and surrounding leaf tissue is inherently susceptible to oxidative damage, especially under stress conditions when the supply of light energy exceeds the capacity to utilize it \citep{durrant1990characterisation,asada1996radical}. Plants have evolved a number of mechanisms, such as photosynthetic apparatus damage and repair \citep{melis1999photosystem}, to dissipate excess light energy to minimize the potential for damage at the expense of photosynthetic efficiency \citep{adams2006energy,rochaix2014regulation}. However, these mechanisms are sensitive to leaf development and thus may change from one leave tissue to another, resulting in heterogenous photosynthetic patterns (see an example in Figure \ref{fig:heterogeneityexample}). The heterogeneous patterns also vary with the position, size and growth rate of leaves, since leaves at the same node is unique in age. By integrating plant morphological and physiological features, measuring plant photosynthetic heterogeneity aids interpretation of the sophisticated photosynthesis phonemics data, particularly important for plant primary productivity estimation and modeling \citep{meng2007spatial}.
+By consuming water, light and $CO_2$, plants produce sugars and release $O_2$ with photosynthesis \citep{kramer2011importance}. The process involves the formation of high energy intermediates capable of generating reactive oxygen species. The photosynthetic apparatus, chloroplast and surrounding leaf tissue is inherently susceptible to oxidative damage, especially under stress conditions when the supply of light energy exceeds the capacity to utilize it \citep{durrant1990characterisation,asada1996radical}. Plants have evolved a number of mechanisms, such as photosynthetic apparatus damage and repair \citep{melis1999photosystem}, to dissipate excess light energy to minimize the potential for damage at the expense of photosynthetic efficiency \citep{adams2006energy,rochaix2014regulation}. However, these mechanisms are sensitive to leaf development and thus may change from one leave tissue to another, resulting in heterogenous photosynthetic patterns (see examples in Figure \ref{fig:heterogeneityexample} where the chlorophyll fluorescence images are false-color images and the light intensity of every pixel is proportional to photosynthetic efficiency~\citep{toet1996new}). The heterogeneous patterns may also vary with the position, size and growth rate of leaves, since leaves at the same node is unique in age. By integrating plant morphological and physiological features, measuring plant photosynthetic heterogeneity aids interpretation of the sophisticated photosynthesis phonemics data, particularly important for plant primary productivity estimation and modeling \citep{meng2007spatial}.
 
 \begin{figure}[tb]
 \centering
@@ -109,7 +109,10 @@ Overall, PlantPH has the following three advantages: %The mutant screen analysis
 %, in which hundreds of plants are screened simultaneously,
 \vspace{-0.2in}
 \section{Background}
-The general method of assessing whether the leaves of a plant are photosynthetically homogeneous or heterogeneous is by means of the Cochran's Q-test \citep{conover1999Practical} and the $I^2$ statistic \citep{higgins2002quantifying,higgins2003measuring}. %The process has three steps.
+The inputs to plant heterogeneity test are leaf-level photosynthesis values obtained using leaf segmentation methods. The general method of assessing whether the leaves of a plant are photosynthetically homogeneous or heterogeneous is by means of the Cochran's Q-test \citep{conover1999Practical} and the $I^2$ statistic \citep{higgins2002quantifying,higgins2003measuring}.
+
+
+%The process has three steps.
 %
 %In short, the Cochran's Q-test is computed by summing the squared deviations of each object's effect estimate from overall effect estimate, weighting the contribution of each object's effect estimate by its inverse variance \citep{conover1999Practical}.
 %
@@ -127,7 +130,36 @@ The general method of assessing whether the leaves of a plant are photosynthetic
 
 %---------------------------
 %\section{Background}
-%\subsection{Heterogeneity test}
+
+%\vspace{-0.2in}
+\subsection{Leaf alignment and tracking}
+
+The input to Plant heterogeneity test are leaf-level photosynthesis values. To obtain the values, a method is needed to identify every piece of leaf from a whole plant image, measure the florescence intensity of every pixel on a leaf, and finally convert the intensity values to biologically meaningful photosynthesis parameters.
+
+In our previous studies, we have developed a new multi-leaf alignment and tracking algorithm~\citep{yin2014} to meet the requirements.  %[MORE INTRO TO LEAF ALIGNMENT HERE]
+%
+Different from the naive procedure of aligning leaves iteratively using the Chamfer distance~\citep{barrow1977parametric}, our tool aims to find the best alignment of multiple leaves simultaneously in an input image. We formulate an optimization problem of an objective function with three terms: the average of chamfer distances of aligned leaves, the number of leaves, and the difference between the synthesized mask by the leaf candidates and the original image mask.
+%
+The extension on leaf tracking~\citep{xi2014tracking} tracks multiple leaves from fluorescence plant videos by continuously applying template transformation to the current leaf candidates in order to fit to the previous frame.
+%
+Experimental results show that the multi-leaf alignment and tracking tool performs substantially better than the baseline of the Chamfer matching algorithm in terms of both accuracy and efficiency.
+
+%Differences between individual leaves with similar photosynthetic efficiency can be subtle, making the boundaries between them difficult to define and creating a significant challenge for subsequent shape analysis. The difficulty even arises when individual leaves overlap and occlude one another in these false-color images.
+
+%We have developed a framework based on the well-known Chamfer Matching algorithm \citep{yin2014}. Multi-leaf alignment aims to segment all leaves with pre-defined leaf templates and estimate the two tip points of each leaf. The tracking algorithm consists of two steps. First, a set of leaf templates are applied to the target image to generate the same amount of leaf candidates. Second, we adopt multi-objective optimization to select a subset of leaf candidates. The objective is to select a minimal number of leaf candidates with smaller Chamfer distances to cover the test image mask as much as possible.
+
+
+
+
+However, there are two obstacles preventing us from directly using our leaf alignment algorithm in PlantPH. First, the tool only identifies one leaf if the leaf overlap rate is high (e.g. 59\%).
+%
+In addition, the leaf boundaries are not precisely identified by the multi-leaf alignment tool, since predefined leaf templates are used.
+%
+Subsequently, the leftover of leaf alignment consists of partial leaves that are highly overlapped and leaf boundaries of the successfully recognized leaves (Fig. XX). The covered leaves are usually old leaves with diverse photosynthesis activities. Simply deleting them may result in inaccurate heterogeneity scores.
+%
+The second obstacle is that the leaf alignment process is a time consuming process. Processing 100 images each containing 20 plants may take about 5 hours. It is not practical to apply leaf alignment on all the images (in our case 17.8 years are need to process all the 31,120 images).
+
+\subsection{Heterogeneity tests}
 
 Cochran's Q-test is the classical measure of heterogeneity~\citep{conover1999Practical}. In leaf-based photosynthetic heterogeneity, $Q$ is calculated as the weighted sum of squared differences between the photosynthesis value of a individual leaf and the pooled photosynthesis value across all leaves with the weights being those used in the pooling method. The distribution of $Q$ is a chi-square statistic with $k-1$ degrees of freedom, where $k$ is the number of leaves. Cochran's Q-test has been widely used in biomedical studies. For example, heterogeneity in the aggressiveness of tumor cell populations has been adopted as an essential feature in predicting treatment success~\citep{OSullivan2003}. %However, due to the nature of plants, leaf-based photosynthetic heterogeneity often includes a small number of leaves, and thus the power of the Q-test in such circumstances could be low~\citep{higgins2003measuring, gavaghan2000evaluation}.
 %
@@ -137,11 +169,13 @@ Cochran's Q-test is the classical measure of heterogeneity~\citep{conover1999Pra
 %
 The $I^2$ statistic describes the percentage of variation across studies that is due to heterogeneity rather than chance~\citep{higgins2002quantifying,higgins2003measuring}. $I^2$ can be calculated as $I^2 = (Q - df)/Q$, where Q is Cochran's Q-test heterogeneity statistic and $df$ is the degrees of freedom. A negative value  indicates no observed heterogeneity, and larger values show increasing heterogeneity. $I^2$ is an intuitive and simple expression of the inconsistency. $I^2$ of leaf-based photosynthetic heterogeneity does not inherently depend upon the number of leaves, so that $I^2$ values of different plants become comparable. A confidence interval for $I^2$ can be constructed using either the iterative non-central chi-squared distribution method \citep{hedges2001power} or the test-based method \citep{higgins2002quantifying}.
 
-Due to the nature of plant, leaf-based photosynthetic heterogeneity often includes a small number of leaves. For example, there are less than ten rosette leaves of 2-3 week old Arabidopsis thaliana (a model plant). Thus, the power of the traditional Cochran's Q-test and $I^2$ statistic in such circumstances could be low~\citep{higgins2003measuring, gavaghan2000evaluation,huedo2006assessing,ioannidis2007uncertainty}. Furthermore, leaves may have different locations and sizes, and varying growth rates \citep{van1991insertional}, but none of them has yet been taken into the computation of heterogeneity.
+Due to the nature of plant, leaf-based photosynthetic heterogeneity often includes a small number of leaves. For example, there are less than ten rosette leaves of 2-3 week old Arabidopsis thaliana (a model plant). Thus, the power of the traditional Cochran's Q-test and $I^2$ statistic in such circumstances could be low~\citep{higgins2003measuring, gavaghan2000evaluation,huedo2006assessing,ioannidis2007uncertainty}. Furthermore, leaves may have different locations and sizes, and varying growth rates \citep{van1991insertional}, but none of them has yet been taken into the measurement of heterogeneity.
 
-Based on the rapid development in the fields of bio-imaging and computer vision, we develop a new approach called PlantPH that quantifies the effect of heterogeneity of photosynthesis across leaves of the same plant, and compare the degree of inconsistency among mutant strains in varying environmental conditions.
+
 
 %To measure leaf-based photosynthetic variability in a large-scale phenotyping experiment, in which hundreds of plants are monitored in real time, it is naturally required to identify each leaf from top-view photosynthesis images automatically. However, leaf identification is a difficult task, in that 1) all the leaves are very similar in appearance especially for model plant Arabidopsis; 2) leaf features are much fewer than the well-studied face recognition problem; and 3) leaves may overlapped with each other that makes the problem more complicated. In short, there are two challenging computational problems. First, how to separate overlapped leaves in photosynthesis images where the leaf boundaries are obscure. Second, how to recognize incomplete leafs due to occlusion. Alternatively, approximation approaches can be used to estimate the leaf-based photosynthetic heterogeneity, including distribution based, region based and pixel based approaches. While these approximation approaches are easier to model, their performance may be reduced.
+
+Based on the rapid development in the fields of bio-imaging and computer vision, we develop a new approach called PlantPH that quantifies the effect of heterogeneity of photosynthesis across leaves of the same plant, and compare the degree of inconsistency among mutant strains in varying environmental conditions.
 
 \begin{methods}\vspace{-0.2in}
 \section{Method}\label{sec:PlantPH}
@@ -237,9 +271,7 @@ Specifically, in $PlantPH(area)$ we have $f(l_i)=area(l_i)$, which measures the 
 
 \subsection{PlantPH workflow}
 
-The input to the PlantPH measurement is leaf-level photosynthesis, which relies on leaf alignment and tracking~\citep{yin2014}. Leaf alignment is a recent developed algorithm to identify leaf boundaries from a serial of florescence images. XXX
 
-There are two obstacles preventing us from directly using the leaf alignment algorithm for leaf heterogeneity test. First, the leaf alignment process may fail when the leaf overlap rate exceeds 50\%, and the leaf boundary is not precisely identified because of the use of predefined leaf templates. Subsequently, the leftover of leaf alignment process on a plant image consists of partial leaves that are highly overlapped and leaf boundaries of the successfully recognized leaves (Fig. XX). Leaves covered by the other leaves are usually old leaves with diverse photosynthesis activities. Simply deleting them may cause inaccurate heterogeneity scores. Second, the leaf alignment process is time consuming. Processing a serial of 100 images each containing about 20 plants may take up to 5 hours. It is not practical to process all the phenotype images, which has occupied 30T space in our hard drive, array using leaf alignment.
 
 In this article, we introduce an efficient workflow for leaf heterogeneity test. We observe that the heterogeneous plant images are rare in the whole dataset. And the distribution of a homogenous plant usually falls into one normal distribution with a relative narrow range of phenotype values compared to the distribution of a heterogenous plant (Fig 1).
 %
@@ -255,27 +287,9 @@ P-value(PlantRange(p_i)) =
 \end{equation}
 \noindent where the p-value is
 
+%\subsection{Refining leaf alignment with density-based clustering}
 
-\end{methods}
-\section{Results}
-
-\subsection{Arabidopsis Images}
-
-\subsubsection{Data Acquisition and Preprocessing}
-
-In the photosynthesis phenotyping experiment, hundreds of Arabidopsis thaliana plants (wild type and genetic variations with gene knockout) were grown side-by-side under three different light conditions (constant, sinusoid, fluctuate), for in total three days.
-%
-Top-view fluorescence images were collected every 15 minutes in order to observe the photosynthesis activity of all of the plants simultaneously. Each fluorescence image is a grey-scale image with a resolution of 1M pixels at 12-bit intensity.
-
-To accurately capture the photosynthesis activities of plants from fluorescence images, a image segment method is applied to remove the background, identify every piece of leaf~\citep{yin2014}, measure the intensity of pixels on leaves, and finally convert the intensity values to the measure of four kinds of photosynthesis parameters.
-%
-The extracted measurements of photosynthesis parameters are presented in the form of multi-dimensional time-series, one dimension for every photosynthesis parameter.
-%
-%Figure ?? shows that the measurements of a photosynthesis parameter $\Phi_{II}$ at one time point are quite different for the leaves of the same plant  (i.e. plant no. 3-7 and 5-5).
-
-\subsubsection{PlantPH on Arabidopsis data}
-
-In this experiment, wild type (col-0) and more than 100 Arabidopsis chloroplast mutant strains were grown side by side in a dynamic light condition for 3 days from 10 days old from seedling. A top-view fluorescence image was taken every 15 minutes during the day time, in order to observe the photosynthesis activity and the growth of the plants simultaneously. The overview of the experimental results is shown in Figure ???. In total, XXX fluorescence images were collected, preprocessed and fed to $PlantPH$. Note that the averaged leaf cell size of Arabidopsis is about $6000 \mu m^2$ \citep{gegas2014endopolyploidy} and our image resolution is 3600 pixels per squared inch. Therefore, each pixel in an image is sampled from about 1000 leaf cells.
+Given that practically any algorithm for leaf tracking and alignment will fail in some cases, we have selected an alignment method that will typically fail by "missing" leaves (parts of the plant will be excluded from alignment results) rather than giving false positives (parts of the plant are over-selected or the background is selected as a leaf). This sort of failure allows us to add another step after the initial alignment in which we use DB Scan \citep{kriegel2011density} to intelligently cluster the non-segmented plant pixels into separate leaves. DB Scan was chosen for being practical, having relatively few parameters, and not depending on the pixel intensities. Using a clustering algorithm that relies heavily on pixel intensities would defeat the purpose of identifying leaves for our application: further down the pipeline we want to consider leaves that have large amounts of variation in intensity. DB Scan is widely understood and used for analysis of spatial information with physical constraints \citep{zaiane2002clustering}, and allows fine-tuning of the minimum thickness of the resulting clusters. Avoiding very thin clusters is also imperative to our application, given that a nearly-correct leaf segmentation may result in a thin band of non-segmented pixels around the edge of a leaf. Considering these pixels as a separate leaf would not be appropriate - setting a minimum-thickness guarantees that any such pixels would not be clustered. Similarly, a leaf with very few pixels is statistically insignificant and often misleading even if the leaf is genuine. By setting a minimum number of pixels per cluster we discard very small clusters even if they meet the minimum thickness requirement.
 
 The architecture of the whole process is shown in Figure \ref{fig:architecture}. First of all, we apply a leaf alignment and tracking method that we recently developed to identify most of the leaves from the top-view fluorescence images~\citep{xi2014tracking,yin2014}, and then compute the leaf-based photosynthesis value for every leaf. In addition, we add a leaf by drawing a small circle in the center of every plant to represent the young leaves that are difficult to identify.
 %
@@ -283,32 +297,49 @@ All the pixels not contained in any leaf boundary are considered as an extra lea
 %
 Next, we apply $PlantPH$ to compute the heterogeneity value for every plant at every snapshot, resulting in a heterogeneity matrix $H$. Finally, we recognize heterogeneity patterns in $H$ with an outlier detection method, and visually explore them with the L'Abbe plot \citep{song1999exploring}.
 
-The results show ...
+%The results show ...
 
-\subsubsection{Leaf alignment and tracking}
+\end{methods}
+\section{Results}
 
-%For completeness, we introduce the leaf alignment and tracking approach...
+We tested the performance of PlantPH on two datasets, i.e. a real dataset from a large-scale Arabidopsis phenotype screen experiment and a synthetic dataset that includes multiple types of heterogeneity patterns. We also compared PlantPH with two popular heterogeneity tests, where one is the traditional Cochran¡¯s Q-test and the $I^2$ statistic, and the other is a grid based heterogeneity test. Overall, the comparisons show that XXX.
 
-The chlorophyll fluorescence images are false-color images, where the light intensity of every pixel is proportional to photosynthetic efficiency \citep{toet1996new} (see Figure \ref{fig:heterogeneityexample}). Differences between individual leaves with similar photosynthetic efficiency can be subtle, making the boundaries between them difficult to define and creating a significant challenge for subsequent shape analysis. The difficulty even arises when individual leaves overlap and occlude one another in these false-color images.
+\subsection{Arabidopsis Experiment}
 
-We have developed a framework based on the well-known Chamfer Matching algorithm \citep{yin2014}. Multi-leaf alignment aims to segment all leaves with pre-defined leaf templates and estimate the two tip points of each leaf. The tracking algorithm consists of two steps. First, a set of leaf templates are applied to the target image to generate the same amount of leaf candidates. Second, we adopt multi-objective optimization to select a subset of leaf candidates. The objective is to select a minimal number of leaf candidates with smaller Chamfer distances to cover the test image mask as much as possible.
+\subsubsection{Data Acquisition and Preprocessing}
 
-Multi-leaf tracking is an extension of the leaf alignment algorithm. Given a serial of fluorescence images  taken over time, we first apply the alignment algorithm to the last frame, and then continuously apply template transformation to the current leaf candidates in order to fit to the previous frame. A new objective function considering the Chamfer Matching distances, target image mask, and the rotation angles of all leaves is adopted.
+In the photosynthesis phenotyping experiment, 567 Arabidopsis thaliana plants (wild types and genetic variations with single gene knockout) that include approximately 3,134 individual leaves, were grown side-by-side under three different light conditions (constant, sinusoid, fluctuate), for in total five days from 10 days old from seedling.
 %
-Both the leaf alignment and leaf tracking directly benefit the study of leaf behavior in plant biology, such as leaf growth, leaf-level photosynthesis, leaf-level variations in plant mutant, etc.
+Top-view fluorescence images were collected periodically (every 15 or 30 minutes) in order to observe the photosynthesis activity of all of the plants simultaneously. Each fluorescence image is a grey-scale image with a resolution of 1M pixels at 12-bit intensity. In total 31,120 fluorescence images were collected. Note that the averaged leaf cell size of Arabidopsis is about $6,000 \mu m^2$ \citep{gegas2014endopolyploidy} and our image resolution is 3,600 pixels per squared inch. Therefore, each pixel in an image is sampled from about 1,000 leaf cells.
 
-\subsection{Refining leaf alignment with density-based clustering}
+To accurately capture photosynthesis activities from the fluorescence images, data preprocessing step was employed to remove image background, identify plants in an image, and delete abnormalities~\citep{xu2015plant}. From all of the processed images,  biologists manually identified all the heterogenous plant images, which serve as the ground truth for performance test.
 
-Given that practically any algorithm for leaf tracking and alignment will fail in some cases, we have selected an alignment method that will typically fail by "missing" leaves (parts of the plant will be excluded from alignment results) rather than giving false positives (parts of the plant are over-selected or the background is selected as a leaf). This sort of failure allows us to add another step after the initial alignment in which we use DB Scan \citep{kriegel2011density} to intelligently cluster the non-segmented plant pixels into separate leaves. DB Scan was chosen for being practical, having relatively few parameters, and not depending on the pixel intensities. Using a clustering algorithm that relies heavily on pixel intensities would defeat the purpose of identifying leaves for our application: further down the pipeline we want to consider leaves that have large amounts of variation in intensity. DB Scan is widely understood and used for analysis of spatial information with physical constraints \citep{zaiane2002clustering}, and allows fine-tuning of the minimum thickness of the resulting clusters. Avoiding very thin clusters is also imperative to our application, given that a nearly-correct leaf segmentation may result in a thin band of non-segmented pixels around the edge of a leaf. Considering these pixels as a separate leaf would not be appropriate - setting a minimum-thickness guarantees that any such pixels would not be clustered. Similarly, a leaf with very few pixels is statistically insignificant and often misleading even if the leaf is genuine. By setting a minimum number of pixels per cluster we discard very small clusters even if they meet the minimum thickness requirement.
+%The extracted measurements of photosynthesis parameters are presented in the form of multi-dimensional time-series, one dimension for every photosynthesis parameter.
+
+%, 
+%
+
+%
+%Figure ?? shows that the measurements of a photosynthesis parameter $\Phi_{II}$ at one time point are quite different for the leaves of the same plant  (i.e. plant no. 3-7 and 5-5).
+
+%\subsubsection{PlantPH on Arabidopsis data}
+
+
+\subsubsection{Performance Evaluation}
+
+
+
+
 
 \subsection{PlantPH on synthetic data}
 
-A set of synthetic data were generated to test whether $PlantPH$ is properly designed.
+\subsubsection{Synthetic Data Generation}
+A set of synthetic data were generated to test whether $PlantPH$ is properly designed...
 
 %\section{Materials and Methods}
 
 
-
+\subsubsection{Performance Evaluation}
 
 
 
