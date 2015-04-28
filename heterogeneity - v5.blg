@@ -2,4 +2,5 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: heterogeneity - v5.au
 The style file: natbib.bst
 Database file #1: heterogeneity.bib
 Warning--empty publisher in adams2006energy
-(There was 1 warning)
+Warning--can't use both volume and number fields in ester1996density
+(There were 2 warnings)

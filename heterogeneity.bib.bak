@@ -1027,6 +1027,16 @@
   publisher={Am Soc Plant Biol}
 }
 
+@article{hall2003interpretation,
+  title={The interpretation of non-homogeneous hydrometeorological time series: a case study},
+  author={Hall, MJ},
+  journal={Meteorological Applications},
+  volume={10},
+  number={01},
+  pages={61--67},
+  year={2003}
+}
+
 @article{sharkey1985o2,
   title={O2-Insensitive Photosynthesis in C3 Plants Its Occurrence and a Possible Explanation},
   author={Sharkey, TD},
@@ -1064,6 +1074,15 @@
   number={12},
   pages={968--983},
   year={2011}
+}
+
+@article{xu2015plant,
+  title={Plant Photosynthesis Phenomics Data Quality Control},
+  author={Xu, Lei and Cruz, Jeffrey A and Savage, Linda J and Kramer, David M and Chen, Jin},
+  journal={Bioinformatics},
+  pages={btu854},
+  year={2015},
+  publisher={Oxford Univ Press}
 }
 
 @article{fiorani2013future,
@@ -1295,6 +1314,13 @@
   author={Yin, X and Liu, X and Chen, J and Kramer, DM},
   journal={IEEE International Conference on Image Processing},
   year={2014}
+}
+
+@techreport{barrow1977parametric,
+  title={Parametric correspondence and chamfer matching: Two new techniques for image matching},
+  author={Barrow, Harry G and Tenenbaum, Jay M and Bolles, Robert C and Wolf, Helen C},
+  year={1977},
+  institution={DTIC Document}
 }
 
 @article{song1999exploring,

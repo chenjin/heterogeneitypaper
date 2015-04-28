@@ -69,6 +69,13 @@ Durrant, J., Giorgi, L., Barber, J., Klug, D., and Porter, G. (1990).
 \newblock {\em Biochimica et Biophysica Acta (BBA)-Bioenergetics\/}, {\bf
   1017}(2), 167--175.
 
+\bibitem[Ester {\em et~al.}(1996)Ester, Kriegel, Sander, and
+  Xu]{ester1996density}
+Ester, M., Kriegel, H.-P., Sander, J., and Xu, X. (1996).
+\newblock A density-based algorithm for discovering clusters in large spatial
+  databases with noise.
+\newblock In {\em Kdd\/}, volume~96, pages 226--231.
+
 \bibitem[Farquhar {\em et~al.}(2001)Farquhar, von Caemmerer, and
   Berry]{farquhar2001models}
 Farquhar, G., von Caemmerer, S., and Berry, J. (2001).
