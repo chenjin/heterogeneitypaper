@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.14)  1 MAY 2015 10:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.14)  1 MAY 2015 15:45
 entering extended mode
 **C:/Users/Oliver/Documents/GitHub/heterogeneitypaper/heterogeneity*-*v5.tex
 ("C:/Users/Oliver/Documents/GitHub/heterogeneitypaper/heterogeneity - v5.tex"
@@ -620,11 +620,11 @@ Hub/heterogeneitypaper/example2-hist.PNG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 186.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 187.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 186.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 187.
 LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
-(Font)              scaled to size 7.19995pt on input line 186.
+(Font)              scaled to size 7.19995pt on input line 187.
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -641,14 +641,14 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [2] <architecture.png, id=28, 691.8648pt x 297.2706pt>
 File: architecture.png Graphic file (type png)
  <use architecture.png>
-Package pdftex.def Info: architecture.png used on input line 197.
+Package pdftex.def Info: architecture.png used on input line 198.
 (pdftex.def)             Requested size: 226.79846pt x 97.44641pt.
 
 <workflowchart-detail.png, id=29, 652.839pt x 1025.2704pt>
 File: workflowchart-detail.png Graphic file (type png)
 
 <use workflowchart-detail.png>
-Package pdftex.def Info: workflowchart-detail.png used on input line 294.
+Package pdftex.def Info: workflowchart-detail.png used on input line 295.
 (pdftex.def)             Requested size: 226.79846pt x 356.17484pt.
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
@@ -663,7 +663,7 @@ Overfull \vbox (1.0pt too high) has occurred while \output is active []
 File: workflowexample.png Graphic file (type png)
 
 <use workflowexample.png>
-Package pdftex.def Info: workflowexample.png used on input line 344.
+Package pdftex.def Info: workflowexample.png used on input line 345.
 (pdftex.def)             Requested size: 226.79846pt x 98.37743pt.
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
@@ -757,7 +757,7 @@ nts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 ymbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "heterogeneity - v5.pdf" (6 pages, 783053 bytes).
+Output written on "heterogeneity - v5.pdf" (6 pages, 783067 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
