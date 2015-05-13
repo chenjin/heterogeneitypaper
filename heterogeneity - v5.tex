@@ -61,8 +61,8 @@ Software is available at XXX.
 \section{Introduction}
 
 %[Phenotyping]
-By consuming water, light and $CO_2$, plants produce sugars and release $O_2$ with photosynthesis \citep{kramer2011importance}. The process involves the formation of high energy intermediates capable of generating reactive oxygen species. The photosynthetic apparatus, chloroplast and surrounding leaf tissue is inherently susceptible to oxidative damage, especially under stress conditions when the supply of light energy exceeds the capacity to utilize it \citep{durrant1990characterisation,asada1996radical}. Plants have evolved a number of mechanisms, such as photosynthetic apparatus damage and repair \citep{melis1999photosystem}, to dissipate excess light energy to minimize the potential for damage at the expense of photosynthetic efficiency \citep{adams2006energy,rochaix2014regulation}. However, these mechanisms are sensitive to leaf development and thus may change from one leave tissue to another, resulting in heterogenous photosynthetic patterns (see examples in Figure \ref{fig:heterogeneityexample} where the chlorophyll fluorescence images are false-color images and the light intensity of every pixel is proportional to photosynthetic efficiency~\citep{toet1996new}). The heterogeneous patterns may also vary with the position, size and growth rate of leaves, since leaves at the same node \textcolor{red}{are} %is 
-unique in age. By integrating plant morphological and physiological features, measuring plant photosynthetic heterogeneity aids interpretation of %the 
+By consuming water, light and $CO_2$, plants produce sugars and release $O_2$ with photosynthesis \citep{kramer2011importance}. The process involves the formation of high energy intermediates capable of generating reactive oxygen species. The photosynthetic apparatus, chloroplast and surrounding leaf tissue is inherently susceptible to oxidative damage, especially under stress conditions when the supply of light energy exceeds the capacity to utilize it \citep{durrant1990characterisation,asada1996radical}. Plants have evolved a number of mechanisms, such as photosynthetic apparatus damage and repair \citep{melis1999photosystem}, to dissipate excess light energy to minimize the potential for damage at the expense of photosynthetic efficiency \citep{adams2006energy,rochaix2014regulation}. However, these mechanisms are sensitive to leaf development and thus may change from one leave tissue to another, resulting in heterogenous photosynthetic patterns (see examples in Figure \ref{fig:heterogeneityexample} where the chlorophyll fluorescence images are false-color images and the light intensity of every pixel is proportional to photosynthetic efficiency~\citep{toet1996new}). The heterogeneous patterns may also vary with the position, size and growth rate of leaves, since leaves at the same node \textcolor{red}{are} %is
+unique in age. By integrating plant morphological and physiological features, measuring plant photosynthetic heterogeneity aids interpretation of %the
 sophisticated photosynthesis phonemics data, \textcolor{red}{which is} particularly important for plant primary productivity estimation and modeling \citep{meng2007spatial}.
 
 \begin{figure}[tb]
@@ -82,26 +82,26 @@ sophisticated photosynthesis phonemics data, \textcolor{red}{which is} particula
 
 %photosynthetic heterogeneity refers to a plant comprising multiple regions, a significant amount of which have different photosynthesis properties, %. %For example, under full sunlight photosynthesis usually captures at most only of available energy (bonner1962upper, von1981some, kramer2011importance).
 
-Heterogeneity is a statistical concept relating to the uniformity in a substance~\citep{hall2003interpretation}. The granularity of %the 
+Heterogeneity is a statistical concept relating to the uniformity in a substance~\citep{hall2003interpretation}. The granularity of %the
 plant photosynthetic heterogeneity studies can range from cells to tissues, leaves, and even to the whole plant level. While in-leaf variability in photosynthetic activity has been well-studied for the understanding of the effects of stomatal conductance~\citep{Cheeseman1991,Buckley1997}, recent works show that photosynthetic capacity may decline with vertical gradient and leaf age \citep{Kitajima2002,chen2008effect}, suggesting that leaf-based photosynthetic heterogeneity is a key towards processing and understanding photosynthesis phenotype images. % the understanding of plant photosynthesis.
 
-%The leaf 
-\textcolor{red}{Leaf} heterogeneity in photosynthesis was \textcolor{red}{first} %firstly been 
+%The leaf
+\textcolor{red}{Leaf} heterogeneity in photosynthesis was \textcolor{red}{first} %firstly been
 studied  with computer simulation~\citep{chen2008effect}. Due to the lack of high-throughput phenotyping technologies, the authors determined the effects of biochemical variability via the Farquhar model (a mechanistic, biochemical model widely used to describe steady-state $CO_2$ assimilation in leaves), incorporating defined degrees of spatial variability of its parameters~\citep{sharkey1985o2,farquhar2001models}. %The results showed that spatial heterogeneity in photosynthesis can affect the ability of the Farquhar model to accurately characterize photosynthesis at the leaf level~\citep{chen2008effect}.
 %
-Recently, with the advent of advanced technologies of biomedical imaging, directly measuring heterogeneity has recently assumed new importance~\citep{tiihonen1996cerebral,wieneke1999non,wang2000,cruz2014depi}. The rapid development of lighting and imaging techniques enables real-time non-invasive monitoring of photosynthesis \citep{houle2010phenomics,cruz2014depi}, resulting in vast amount of chlorophyll fluorescence images of plants \citep{wituszynska2013multivariable}. These images can be used to quantify photosynthetic behavior in genetically diverse populations, enabling \textcolor{red}{the measurement of} %to measure 
+Recently, with the advent of advanced technologies of biomedical imaging, directly measuring heterogeneity has recently assumed new importance~\citep{tiihonen1996cerebral,wieneke1999non,wang2000,cruz2014depi}. The rapid development of lighting and imaging techniques enables real-time non-invasive monitoring of photosynthesis \citep{houle2010phenomics,cruz2014depi}, resulting in vast amount of chlorophyll fluorescence images of plants \citep{wituszynska2013multivariable}. These images can be used to quantify photosynthetic behavior in genetically diverse populations, enabling \textcolor{red}{the measurement of} %to measure
 variability of photosynthetic parameters at high resolution across leaves, leading to better understanding of the underlying mechanisms that control the photosynthetic properties \citep{rascher2011non,fiorani2013future}. %However, there is no
 
-Measuring leaf-based photosynthetic variability in large-scale phenotyping experiments requires automatic%al 
+Measuring leaf-based photosynthetic variability in large-scale phenotyping experiments requires automatic%al
 identification of most of the visible leaves in all fluorescence images and an appropriate measurement for the variation of photosynthesis parameters across leaves that takes geometrical (leaf position and size), temporal (leaf growth rate) and physiological (leaf age) information into consideration. However, there is currently no existing infrastructure to analyze such \textcolor{red}{an} amount of phenotype information. %The challenges of this work include not only the accurate leaf alignment in complex plant leaf layout, but also the development of a new heterogeneity measure that
 %
-In this paper, we present a new computational framework called {\it Plant Photosynthesis Heterogeneity} (PlantPH), and use the tool to analyze the leaf-level photosynthesis heterogeneity patterns of more than 100 Arabidopsis chloroplast mutant strains over dynamic lighting conditions, each with at least four replicates. The followed outlier detection process successfully \textcolor{red}{identifies} %identify 
+In this paper, we present a new computational framework called {\it Plant Photosynthesis Heterogeneity} (PlantPH), and use the tool to analyze the leaf-level photosynthesis heterogeneity patterns of more than 100 Arabidopsis chloroplast mutant strains over dynamic lighting conditions, each with at least four replicates. The followed outlier detection process successfully \textcolor{red}{identifies} %identify
 mutants with distinct heterogeneity patterns under specific subsets of the environmental conditions.
 %
 Overall, PlantPH has the following three advantages: %The mutant screen analysis reveals that ...
 \begin{enumerate}\vspace{-0.1in}
   \item~~It is the first computational framework to measure plant leaf-level heterogeneity of photosynthesis with leaf size, position and growth rate.
-  \item~It's performance is significantly better than %the 
+  \item~It's performance is significantly better than %the
 traditional heterogeneity tests that cannot fully use the spatial and temporal information in the fluorescence images.
   \item~It discovers multiple types of photosynthetic variabilities in a large scale experiment.
 \end{enumerate}
@@ -180,7 +180,7 @@ Cochran's Q-test is the classical measure of heterogeneity~\citep{conover1999Pra
 
 The $I^2$ statistic describes the percentage of variation across studies that is due to heterogeneity rather than chance~\citep{higgins2002quantifying,higgins2003measuring}. $I^2$ can be calculated as $I^2 = (Q - df)/Q$, where Q is Cochran's Q-test heterogeneity statistic and $df$ is the degrees of freedom. A negative value  indicates no observed heterogeneity, and larger values show increasing heterogeneity. $I^2$ is an intuitive and simple expression of the inconsistency. $I^2$ of leaf-based photosynthetic heterogeneity does not inherently depend upon the number of leaves, so that $I^2$ values of different plants become comparable. A confidence interval for $I^2$ can be constructed using either the iterative non-central chi-squared distribution method \citep{hedges2001power} or the test-based method \citep{higgins2002quantifying}.
 
-However, due to the nature of plants, leaf-based photosynthetic heterogeneity often includes a small number of leaves. For example, there are \textcolor{red}{fewer} %less 
+However, due to the nature of plants, leaf-based photosynthetic heterogeneity often includes a small number of leaves. For example, there are \textcolor{red}{fewer} %less
 than ten rosette leaves %of
 \textcolor{red}{on a} 2-3 week old Arabidopsis thaliana (a model plant). Thus, the power of the traditional Cochran's Q-test and $I^2$ statistic in such circumstances is low~\citep{higgins2003measuring, gavaghan2000evaluation,huedo2006assessing,ioannidis2007uncertainty}.
 
@@ -196,7 +196,7 @@ Furthermore, leaves with different locations, sizes or growth rates may have div
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[width=0.45\textwidth]{architecture.png}\vspace{-0.1in}
-  \caption{Architecture of plant phenotype analysis where PlantPH serves as a key player for heterogeneity pattern mining.}\label{fig:architecture}\vspace{-0.2in}
+  \caption{Architecture of plant phenotype analysis where PlantPH serves as a key player for phenotype pattern mining.}\label{fig:architecture}\vspace{-0.2in}
 \end{figure}
 
 %the effect of heterogeneity
