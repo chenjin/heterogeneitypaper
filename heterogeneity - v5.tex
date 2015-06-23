@@ -261,6 +261,8 @@ In Equation \ref{eq:Q3}, $PlantPH(f)$ is a measure for determining whether there
 
 Specifically, in $PlantPH(area)$ we have $f(l_i)=area(l_i)$, which measures the leaf surface area \citep{boyes2001growth,tessmer2013functional}, and in $PlantPH(growth)$ we define $f(l_i)=growth\_rate(l_i)$ by adopting a three-parameter nonlinear growth model to compute both the absolute growth rate (AGR) and the relative growth rate (RGR) \citep{Richards1959,hunt1982plant,tessmer2013functional}. Moreover, in $PlantPH(position)$, we define $f(l_i)=position(l_i)$ to be 0 if $l_i$ is at the center of the plant, and 1 otherwise, in order to measure whether the leaves with a similar developmental stage have heterogeneous photosynthetic values.
 
+A P-value map was created in order to quickly assign a P-value to any plant based on only two parameters: the average intensity of fluorescence, and the range of fluorescence values. This map was developed according to the full set of arabidopsis data collected at the PLant REasearc Lab of MSU. First, the full set of plant images were divided into 100 bins (mean-bins) based on average intensity. Within each of these bins, the plants were divided into 100 bins (range-bins) based on the range of intensities within that mean-bin. Each of the resulting 10,000 bins corresponds to a p-value based on the range-bin so that p-values range from 0 to 1 within each mean-bin. This design takes full advantage of the large dataset in order to account for the tendency for high-intensity plants to have relatively large ranges. Plants with low p-values are considered "potentially heterogeneious" because they have a relatively large range for their average intensitiy. Applying computationally-intensive leaf segmantion to these plants is necessary to determine the meaning of their large ranges. In some cases they are still not considered heterogeneious, for example if the large range of intensity results from edge-of-leaf low intensity patterns.
+
  %we apply the following approach:
 %\begin{enumerate}
 %  \item Let $f(l_i)$ be $position(l_i)$ which returns 0 if $l_i$ is at the center of the plant, and returns 1 otherwise;
@@ -380,14 +382,12 @@ To accurately capture photosynthesis activities from the fluorescence images, da
 \subsection{PlantPH on synthetic data}
 
 \subsubsection{Synthetic Data Generation}
-A set of synthetic data were generated to test whether $PlantPH$ is properly designed...
+A synthetic top-view fluorescence image was generated to test whether $PlantPH$ is properly designed. The synthetic image contains a grid of synthetic plants, each with 9 circular leaves. Each synthetic plant is given a unique phenotype by gradually altering different factors along each dimension. Along the horizontal axis leaf-average fluorescence values are  switched from low to high (one leaf at a time), and along the veritcal axis in-leaf variation is gradually increased. 
 
 %\section{Materials and Methods}
 
 
 \subsubsection{Performance Evaluation}
-
-
 
 % Results and Discussion can be combined.
 

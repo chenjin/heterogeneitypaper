@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.14)  1 MAY 2015 15:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.14)  23 JUN 2015 15:34
 entering extended mode
 **C:/Users/Oliver/Documents/GitHub/heterogeneitypaper/heterogeneity*-*v5.tex
 ("C:/Users/Oliver/Documents/GitHub/heterogeneitypaper/heterogeneity - v5.tex"
@@ -648,7 +648,7 @@ Package pdftex.def Info: architecture.png used on input line 198.
 File: workflowchart-detail.png Graphic file (type png)
 
 <use workflowchart-detail.png>
-Package pdftex.def Info: workflowchart-detail.png used on input line 295.
+Package pdftex.def Info: workflowchart-detail.png used on input line 297.
 (pdftex.def)             Requested size: 226.79846pt x 356.17484pt.
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
@@ -663,7 +663,7 @@ Overfull \vbox (1.0pt too high) has occurred while \output is active []
 File: workflowexample.png Graphic file (type png)
 
 <use workflowexample.png>
-Package pdftex.def Info: workflowexample.png used on input line 345.
+Package pdftex.def Info: workflowexample.png used on input line 347.
 (pdftex.def)             Requested size: 226.79846pt x 98.37743pt.
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
@@ -671,9 +671,6 @@ Missing character: There is no ½ in font ptmr7t!
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -712,10 +709,10 @@ Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [5])
 - LAST -
-Extra skip:9.0pt
-Left:82.0pt/1.51544pt
-Right:73.0pt/1.51544pt
-Output:82.0pt
+Extra skip:18.0pt
+Left:208.0pt/1.51544pt
+Right:190.0pt/1.51544pt
+Output:208.0pt
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -739,11 +736,11 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  4837 strings out of 493921
  64769 string characters out of 3144873
- 139706 words of memory out of 3000000
+ 141706 words of memory out of 3000000
  7908 multiletter control sequences out of 15000+200000
  99856 words of font info for 209 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 42i,11n,28p,1441b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,28p,1441b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
@@ -757,7 +754,7 @@ nts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 ymbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "heterogeneity - v5.pdf" (6 pages, 783067 bytes).
+Output written on "heterogeneity - v5.pdf" (6 pages, 784780 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
